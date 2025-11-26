@@ -12,7 +12,7 @@ except ImportError:
 
 # sentinel_sysinfo.py
 #
-# This module collects system information such as:
+# This module collects system information such as
 # - Hostname and logged-in username
 # - OS details (Windows/Linux/Mac + versions)
 # - Hardware info (CPU, RAM)
