@@ -4,13 +4,20 @@
 # This is where the agent gets its identity and connection settings.
 
 import os
+import platform
 import json
 import uuid
 import socket
 from typing import Any, Dict
 
 # Config file name
-CONFIG_PATH = r'C:\Users\senat\PycharmProjects\Sentinel\agent_config.json'
+CONFIG_PATH = None
+path_windows=r'C:\Users\senat\PycharmProjects\Sentinel\agent_config.json'
+path_macos=r'/Users/logicalzee/PycharmProjects/sentinel_test/agent_config.json'
+if platform.system() == "Windows":
+    CONFIG_PATH = path_windows
+else:
+    CONFIG_PATH = path_macos
 
 def get_default_config() -> Dict[str, Any]:
     # Create a default configuration dictionary for the agent.
