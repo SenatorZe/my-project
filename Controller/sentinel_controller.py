@@ -12,22 +12,34 @@ import sys
 import threading
 from dataclasses import dataclass, field
 from typing import List, Tuple, Optional
+from sentinel_protocol import recv_message
 
+@dataclass
 class AgentConnection:
     """
     Represents a single connected agent.
-    For now, we only track its socket and address (ip, port).
-    Later we'll extend this with agent_id, display_name, capabilities, etc.
+    Fields:
+        - sock        : the socket connected to the agent.
+        - addr        : remote address (ip, port).
+        - agent_id    : unique ID reported by the agent in its hello message.
+        - display_name: human-friendly name (usually hostname), also from hello.
     """
     sock: socket.socket
     addr: Tuple[str, int] # (IP, Port)
+    agent_id: Optional[str] = None
+    display_name: Optional[str] = None
 
     def label(self) -> str:
         """
         Human-friendly label for printing this agent in the CLI.
         Example: '192.168.1.50:54321'
+        Priority:
+            1. display_name + (agent_id)
+            2. ip:port
         """
         ip, port =self.addr
+        if self.display_name and self.agent_id:
+            return f"{self.display_name} (id: {self.agent_id}) from {ip}:{port}"
         return f"{ip}:{port}"
 
 class Controller:
@@ -70,16 +82,23 @@ class Controller:
             - The controller is listening on (host, port).
             - The CLI can keep running and use 'agents' to see new connections.
         """
-        if self._server_sock is None:
+        if self._server_sock is not None:
+            print("[DEBUG] Controller.start() called but server is already running.")
             # Already started
             return
 
-        server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # Allow quick restart after exit without waiting for TIME_WAIT.
-        server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        server_sock.bind((self.host, self.port))
-        server_sock.listen()
+        try:
+            print(f"[DEBUG] Starting controller on {self.host}:{self.port}")
+            server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            # Allow quick restart after exit without waiting for TIME_WAIT.
+            server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            server_sock.bind((self.host, self.port))
+            server_sock.listen()
+        except OSError as e:
+            print(f"Failed to start controller on {self.host}:{self.port} -> {e}")
+            return
 
+        print(f"[+] Controller listening on {self.host}:{self.port}")  # debug line
         self._server_sock = server_sock
         self._accepting = True
 
@@ -98,6 +117,11 @@ class Controller:
         This loop runs as long as self._accepting is True and the server
         socket is open. Each new connection is wrapped in an AgentConnection
         object and added to self.agents.
+        For each new connection:
+            - Accept the TCP connection.
+            - Expect a 'hello' JSON message as the first message.
+            - If the hello is valid, store agent_id and display_name.
+            - If not, close the socket and ignore the connection.
         """
         assert self._server_sock is not None
 
@@ -109,13 +133,43 @@ class Controller:
                 # Socket closed or error during accept; stop the loop
                 break
 
-            agent = AgentConnection(sock=client_sock, addr=addr) # Wrap the raw socket + address into our AgentConnection dataclass.
+            ip, port = addr
+            # Try to receive the hello message from the agent.
+            hello = recv_message(client_sock)
+
+            if not hello:
+                # Either no message or bad JSON, or not a hello.
+                print(f'[!] Connection from {ip}:{port} did not send a valid hello message. Closing.')
+                try:
+                    client_sock.close()
+                except OSError:
+                    pass
+                continue
+
+            agent_id = hello.get('agent_id')
+            display_name = hello.get('display_name')
+            if not agent_id or not display_name:
+                print(f"[!] Hello from {ip}:{port} missing agent_id or display_name. Closing.")
+                try:
+                    client_sock.close()
+                except OSError:
+                    pass
+                continue
+
+            # Wrap the socket + address into our AgentConnection dataclass,
+            # including the agent ID and display name reported by the agent.
+            agent = AgentConnection(
+                sock=client_sock,
+                addr=addr,
+                agent_id=agent_id,
+                display_name=display_name,
+            ) # Wrap the raw socket + address into our AgentConnection dataclass.
 
             with self._agent_lock: # Add the new agent to the list in a thread-safe way.
                 self.agents.append(agent)
 
             ip, port = addr
-            print(f'[+] Agent connected to {ip}:{port}')
+            print(f'[+] Agent connected to {display_name} (id: {agent_id}) from {ip}:{port}.')
 
     def stop(self) -> None:
         """
@@ -173,7 +227,7 @@ def main() -> int:
     controller = Controller(host="0.0.0.0", port=9000)
     controller.start()
 
-    banner = pyfiglet.figlet_format("---Sentinel---")
+    banner = pyfiglet.figlet_format(font='sub-zero', text="Sentinel")
     print(banner)
     print("Sentinel Guard Controller")
     print("=========================")
