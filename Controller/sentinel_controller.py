@@ -12,7 +12,7 @@ import sys
 import threading
 from dataclasses import dataclass, field
 from typing import List, Tuple, Optional
-from sentinel_protocol import recv_message
+from sentinel_protocol import recv_message,send_message
 
 @dataclass
 class AgentConnection:
@@ -66,13 +66,23 @@ class Controller:
         self.port = port
         self._server_sock: Optional[socket.socket] = None # The TCP listening socket (created in start()).
         self._accept_thread: Optional[threading.Thread] = None # Background thread that runs _accept_loop().
-        self._accepting = False # Flag used to tell the accept loop whether it should keep running.
+        self._accepting = False # Flag used to tell the acceptance loop whether it should keep running.
+        self._next_command_id = 1 # Simple counter to generate unique command IDs.
 
         # List of Currently connected agents.
         self.agents: List[AgentConnection] = []
 
         # A simple lock to protect self.agents when accessed from multiple threads.s
         self._agent_lock = threading.Lock()
+
+    def next_command_id(self) -> str:
+        """
+        Generate a simple unique command ID for tracking commands
+        and matching them to command_result messages.
+        """
+        cid=f'cmd-{self._next_command_id}'
+        self._next_command_id += 1
+        return cid
 
     def start(self) -> None:
         """
@@ -165,7 +175,18 @@ class Controller:
                 display_name=display_name,
             ) # Wrap the raw socket + address into our AgentConnection dataclass.
 
+            # If an agent with the same agent_id already exists, remove it.
             with self._agent_lock: # Add the new agent to the list in a thread-safe way.
+                old_agents = [a for a in self.agents if a.agent_id == agent_id]
+                for old_agent in old_agents:
+                    try:
+                        old_agent.sock.close()
+                    except OSError:
+                        pass
+                    try:
+                        self.agents.remove(old_agent)
+                    except ValueError:
+                        pass
                 self.agents.append(agent)
 
             ip, port = addr
@@ -212,6 +233,156 @@ class Controller:
         with self._agent_lock:
             return list(self.agents)
 
+    def remove_agents(self, agent: AgentConnection) -> None:
+        """
+        Remove an agent from the controller's list and close its socket.
+        Safe to call multiple times.
+        """
+        with self._agent_lock:
+            if agent in self.agents:
+                self.agents.remove(agent)
+        try:
+            agent.sock.close()
+        except OSError:
+            pass
+
+def send_ping_and_wait(controller: Controller, agent: AgentConnection, timeout: float=5.0) -> None:
+    """
+    Send a PING command to the given agent and wait for a command_result.
+
+    This function:
+        - builds a 'command' message with command='PING'
+        - sends it to the agent
+        - waits up to 'timeout' seconds for a reply
+        - prints the result to the CLI
+    """
+    if agent.agent_id is None:
+        print(f"[!] Cannot send PING: agent_id is unknown.")
+        return
+
+    cmd_id = controller.next_command_id()
+
+    cmd_msg = {
+        'type': 'command',
+        'command': 'PING',
+        'command_id': cmd_id,
+        'agent_id': agent.agent_id,
+        'params':{}
+    }
+
+    try:
+        send_message(agent.sock, cmd_msg)
+        print(f"[>] Sent PING to {agent.label()}, waiting for result...")
+    except Exception as e:
+        print(f"[!] Failed to send PING: {e}")
+        print("Marking agent as disconnected and removing it from the list.")
+        controller.remove_agents(agent)
+        return
+
+    # Wait for a single response from this agent.
+    reply=recv_message(agent.sock, timeout=timeout)
+    if reply is None:
+        print('[!] No response to PING (timeout or connection closed).')
+        print("Marking agent as disconnected and removing it from the list.")
+        controller.remove_agents(agent)
+        return
+
+    if reply.get('type') != 'command_result':
+        print(f"[?] Unexpected message type {reply['type']} from {agent.label()}. in response to PING.")
+        return
+
+    if reply.get('command_id') != cmd_id or reply.get('command') != 'PING':
+        print(f"[?] Received command_result that does not match our PING command: {reply}")
+        return
+
+    status = reply.get('status')
+    details = reply.get('details') or {}
+    msg = details.get('message', '')
+
+    if status == 'ok':
+        print(f'[PONG] {agent.label()} responded with: {msg}')
+    else:
+        print(f'[!] PING error from {agent.label()}: {status} - {msg}')
+
+def send_sysinfo_and_wait(controller: Controller, agent: AgentConnection, timeout: float=10.0) -> None:
+    """
+    Send a SYSINFO command to the given agent and wait for a command_result.
+    On success, prints a concise summary of the system info.
+    """
+    if agent.agent_id is None:
+        print('[!] Cannot send SYSINFO: agent_id is unknown.')
+        return
+
+    cmd_id = controller.next_command_id()
+    cmd_msg = {
+        'type': 'command',
+        'command': 'SYSINFO',
+        'command_id': cmd_id,
+        'agent_id': agent.agent_id,
+        'params':{},
+    }
+
+    try:
+        send_message(agent.sock, cmd_msg)
+        print(f'[>] Sent SYSINFO request to {agent.label()}, waiting for response...')
+    except Exception as e:
+        print(f"[!] Failed to send SYSINFO: {e}")
+        print("Marking agent as disconnected and removing it from the list.")
+        controller.remove_agents(agent)
+        return
+
+    # Wait for a single response from this agent.
+    reply=recv_message(agent.sock, timeout=timeout)
+
+    if reply is None:
+        print('[!] No response to SYSINFO (timeout or connection closed).')
+        print("    Marking agent as disconnected and removing it from the list.")
+        controller.remove_agents(agent)
+        return
+
+    if reply.get('type') != 'command_result':
+        print(f"[?] Unexpected message type {reply['type']} from {agent.label()}. in response to SYSINFO.")
+        return
+
+    if reply.get('command_id') != cmd_id or reply.get('command') != 'SYSINFO':
+        print(f"[?] Received command_result that does not match our SYSINFO command: {reply}")
+        return
+
+    status = reply.get('status')
+    details = reply.get('details') or {}
+    data = details.get('data') or {}
+    message=details.get('message','')
+
+    if status != 'ok':
+        print(f'[!] SYSINFO error from {agent.label()}: {status} - {message}')
+        return
+
+    # At this point, 'data' should hold the full sysinfo dict.
+    # We print only a clean summary.
+    print_sysinfo_summary(agent, data)
+
+def print_sysinfo_summary(agent: AgentConnection, data: dict) -> None:
+    """
+    Print a concise, human-friendly summary of the sysinfo data.
+    We assume 'data' is the dict returned by the agent's collect_sysinfo().
+    We try to read common fields but fall back gracefully if some are missing.
+    """
+    hostname = data.get('hostname') or data.get('host', {}).get('hostname') or 'Unknown'
+    os_name = data.get('os', {}).get('name') or 'Unknown'
+    os_version = data.get('os', {}).get('version') or 'Unknown'
+    cpu=data.get('hardware', {}).get('cpu_model') or 'Unknown'
+    ram_gb=data.get('hardware', {}).get('ram_mb') or 'Unknown'
+    ip_list=data.get('network', {}).get('primary_ip') or []
+    if isinstance(ip_list, str):
+        ip_list=[ip_list]
+    ip_display=', '.join(ip_list) if ip_list else 'none'
+
+    print(f"[SYSINFO] {hostname} ({agent.agent_id})")
+    print(f"  OS: {os_name} {os_version}")
+    print(f"  CPU: {cpu}")
+    print(f"  RAM: {ram_gb} GB")
+    print(f"  IP: {ip_display}")
+
 def main() -> int:
     """
     Entry point for the Sentinel Guard Controller (Phase 1 skeleton).
@@ -250,6 +421,8 @@ def main() -> int:
                 print("Available commands:")
                 print("  help    - Show this help message")
                 print("  agents  - List connected agents")
+                print("  ping N  - Send PING to agent #N (as listed by 'agents')")
+                print("  sysinfo N     - Request SYSINFO from agent #N")
                 print("  quit    - Exit the controller")
                 print("  exit    - Same as 'quit'")
                 continue
@@ -262,6 +435,52 @@ def main() -> int:
                     print("Connected agents:")
                     for idx, agent in enumerate(agents, start=1):
                         print(f"  {idx}) {agent.label()}")
+                continue
+
+            if command.startswith('ping'):
+                parts = command.split()
+                if len(parts) != 2:
+                    print('Usage: ping N (where N is the agent number shown in "agents")')
+                    continue
+
+                try:
+                    idx=int(parts[1])
+                except ValueError:
+                    print("Usage: ping N (N must be a number)")
+                    continue
+
+                agents = controller.list_agents()
+                if idx <= 0 or idx > len(agents):
+                    print(f"Invalid agent number: {idx}. Use 'agents' to see valid numbers.")
+                    continue
+
+                agents = agents[idx-1]
+                send_ping_and_wait(controller, agents)
+                continue
+
+            if command.startswith('sysinfo'):
+                parts = command.split()
+                if len(parts) != 2:
+                    print('Usage: sysinfo N (where N is the agent number shown in "agents")')
+                    continue
+
+                try:
+                    idx=int(parts[1])
+                except ValueError:
+                    print("Usage: sysinfo N (N must be a number)")
+                    continue
+
+                agents = controller.list_agents()
+                if not agents:
+                    print("No agents connected.")
+                    continue
+
+                if idx < 1 or idx > len(agents):
+                    print(f'Invalid agent number: {idx}. Use "agents" to see valid numbers.')
+                    continue
+
+                agents = agents[idx-1]
+                send_sysinfo_and_wait(controller, agents)
                 continue
 
             # Unknown command
