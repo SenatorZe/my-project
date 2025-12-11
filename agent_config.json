@@ -1,0 +1,18 @@
+{
+  "agent_id": "sentinel-AGENT-90c929be",
+  "display_name": "SENATOR",
+  "controller_host": "127.0.0.1",
+  "controller_port": 9000,
+  "reconnect_interval_seconds": 5,
+  "enable_process_monitor": false,
+  "enable_network_monitor": false,
+  "enable_fim": false,
+  "enable_vulncheck": false,
+  "monitor_interval_seconds": 30,
+  "log_level": "info",
+  "fim_paths": [
+    "C:\\Users\\senat\\OneDrive\\Documents\\Monitor\\emails.txt"
+  ],
+  "cpu_spike_percent_over_baseline": 45,
+  "ram_spike_percent_over_baseline": 65
+}

@@ -8,6 +8,7 @@ import platform
 import json
 import uuid
 import socket
+from pathlib import Path
 from typing import Any, Dict
 
 # Config file name
@@ -47,19 +48,33 @@ def get_default_config() -> Dict[str, Any]:
         "enable_fim": True,
         "enable_vulncheck": True,
 
+        # NEW: thresholds for resource alerts (percent above baseline).
+        # Example: if baseline CPU avg is 10% and this is 50,
+        #          alert when CPU > 10% + 50% = 60%.
+        'cpu_spike_percent_over_baseline': 50,
+        'ram_spike_percent_over_baseline': 50,
+
         # How often the main monitoring loop should run (in seconds)
         "monitor_interval_seconds": 30,
 
         # Logging verbosity for the agent (could be "debug", "info", "warning", etc.)
         "log_level": "info",
+
+        # NEW: file paths that FIM will track.
+        # These can be updated from the controller later.
+        "fim_paths": [],  # e.g. ["C:\\Windows\\System32\\drivers\\etc\\hosts"]
     }
 
 def save_config(config: Dict[str, Any], path: str = CONFIG_PATH) -> None:
     """
     Save the given configuration dictionary to disk as JSON.
     """
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(config, f, indent=2)
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(config, f, indent=2)
+        print(f'[CFG] Saved agent configuration to {path}')
+    except OSError as e:
+        print(f'[CFG] Failed to save agent configuration: {e}')
 
 def load_config(path: str = CONFIG_PATH) -> Dict[str, Any] | None:
     # Load configuration from disk.
