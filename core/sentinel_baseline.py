@@ -28,11 +28,10 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 import psutil
 import socket
-from sentinel_sysinfo import get_system_info
+from core.sentinel_sysinfo import get_system_info
 
-# Where to store the baseline JSON file.
-# For now we keep it next to this script as "sentinel_baseline.json".
-BASELINE_FILE = Path(__file__).with_name("sentinel_baseline.json")
+# Where to store the baseline JSON file — project root, not core/.
+BASELINE_FILE = Path(__file__).parent.parent / "sentinel_baseline.json"
 
 def _now_iso() -> str:
     """Return the current UTC time as an ISO-8601 string."""
@@ -321,7 +320,13 @@ Set-Acl -Path $path -AclObject $acl
     try:
         completed=subprocess.run(
             ['powershell', '-NoProfile', '-Command', ps_script],
-            capture_output=True, check=True, text=True,
+            capture_output=True,
+            # check=False so a non-zero exit code does NOT raise CalledProcessError.
+            # Without this, any PowerShell failure (e.g. running without admin rights)
+            # would crash the entire agent. Instead we let the returncode != 0 block
+            # below handle the failure gracefully and return False.
+            check=False,
+            text=True,
         )
     except OSError as e:
         print(f"[FIM] Failed to run PowerShell to set auditing for {path}: {e}")

@@ -4,15 +4,38 @@
   "controller_host": "127.0.0.1",
   "controller_port": 9000,
   "reconnect_interval_seconds": 5,
-  "enable_process_monitor": false,
-  "enable_network_monitor": false,
-  "enable_fim": false,
+  "enable_process_monitor": true,
+  "enable_network_monitor": true,
+  "enable_fim": true,
   "enable_vulncheck": false,
-  "monitor_interval_seconds": 30,
+  "monitor_interval_seconds": 5,
   "log_level": "info",
   "fim_paths": [
     "C:\\Users\\senat\\OneDrive\\Documents\\Monitor\\emails.txt"
   ],
   "cpu_spike_percent_over_baseline": 45,
-  "ram_spike_percent_over_baseline": 65
+  "ram_spike_percent_over_baseline": 65,
+  "process_whitelist": [
+    {
+      "name": "Time.exe",
+      "exe": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2510.4.0_x64__8wekyb3d8bbwe\\Time.exe",
+      "username": null
+    },
+    {
+      "name": "Photos.exe",
+      "exe": "C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2025.11120.5001.0_x64__8wekyb3d8bbwe\\Photos.exe",
+      "username": "SENATOR\\senat"
+    }
+  ],
+  "blocked_ips": [],
+  "network_ip_whitelist": [
+    "146.75.74.137",
+    "17.250.81.67",
+    "146.75.74.172",
+    "192.168.0.56",
+    "104.18.32.47"
+  ],
+  "fim_quarantine_dir": "C:\\ProgramData\\Sentinel\\quarantine",
+  "network_dns_lookup_enabled": true,
+  "network_dns_lookup_timeout_seconds": 1.5
 }

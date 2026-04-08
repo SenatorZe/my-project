@@ -2,11 +2,11 @@
   "schema_version": 1,
   "agent_id": "sentinel-AGENT-90c929be",
   "display_name": "SENATOR",
-  "created_at": "2025-12-10T22:46:41.350730+00:00",
+  "created_at": "2025-12-11T11:51:37.144706+00:00",
   "sysinfo": {
     "type": "sysinfo",
     "agent_id": "sentinel_agent-01",
-    "timestamp": "2025-12-10T22:46:26.517890+00:00",
+    "timestamp": "2025-12-11T11:51:24.311307+00:00",
     "host": {
       "hostname": "SENATOR",
       "username": "senat"
@@ -30,17 +30,17 @@
   "resources": {
     "sampling_window_seconds": 10,
     "cpu": {
-      "avg": 31.8,
-      "max": 69.0,
-      "min": 12.5,
-      "stddev": 16.27083279982927,
+      "avg": 32.46,
+      "max": 82.0,
+      "min": 13.2,
+      "stddev": 21.430258981169594,
       "sample_count": 10
     },
     "ram": {
-      "avg": 89.67,
-      "max": 89.7,
-      "min": 89.6,
-      "stddev": 0.048304589153968916,
+      "avg": 70.88000000000001,
+      "max": 71.0,
+      "min": 70.8,
+      "stddev": 0.06324555320336998,
       "sample_count": 10
     }
   },
@@ -1465,6 +1465,36 @@
       "parent_name": "msedgewebview2.exe"
     },
     {
+      "name": "brave.exe",
+      "pid": 4568,
+      "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "--type=renderer",
+        "--enable-distillability-service",
+        "--origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU=",
+        "--no-pre-read-main-dll",
+        "--start-stack-profiler",
+        "--video-capture-use-gpu-memory-buffer",
+        "--lang=en-GB",
+        "--device-scale-factor=1",
+        "--num-raster-threads=2",
+        "--enable-main-frame-before-activation",
+        "--renderer-client-id=2414",
+        "--time-ticks-at-unix-epoch=-1765154086043695",
+        "--launch-time-ticks=299566560519",
+        "--metrics-shmem-handle=9048,i,2805046130054933709,11297893537869595364,2097152",
+        "--field-trial-handle=2372,i,9557323275121780777,12798466449319400985,262144",
+        "--variations-seed-version=main@8ede84b65cb4d9cdc90358f8a10de1dfbc087891",
+        "--trace-process-track-uuid=3190711248330894980",
+        "--mojo-platform-channel-handle=13684",
+        "/prefetch:1"
+      ],
+      "ppid": 22672,
+      "parent_name": "brave.exe"
+    },
+    {
       "name": "svchost.exe",
       "pid": 4572,
       "exe": "C:\\Windows\\System32\\svchost.exe",
@@ -1741,17 +1771,6 @@
       "parent_name": "services.exe"
     },
     {
-      "name": "MpDefenderCoreService.exe",
-      "pid": 5280,
-      "exe": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25100.9008-0\\MpDefenderCoreService.exe",
-      "username": "NT AUTHORITY\\SYSTEM",
-      "cmdline": [
-        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25100.9008-0\\MpDefenderCoreService.exe"
-      ],
-      "ppid": 1112,
-      "parent_name": "services.exe"
-    },
-    {
       "name": "vmware-authd.exe",
       "pid": 5292,
       "exe": "C:\\Program Files (x86)\\VMware\\VMware Player\\vmware-authd.exe",
@@ -1769,17 +1788,6 @@
       "username": "NT AUTHORITY\\SYSTEM",
       "cmdline": [
         "C:\\WINDOWS\\SysWOW64\\vmnat.exe"
-      ],
-      "ppid": 1112,
-      "parent_name": "services.exe"
-    },
-    {
-      "name": "MsMpEng.exe",
-      "pid": 5360,
-      "exe": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25100.9008-0\\MsMpEng.exe",
-      "username": "NT AUTHORITY\\SYSTEM",
-      "cmdline": [
-        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25100.9008-0\\MsMpEng.exe"
       ],
       "ppid": 1112,
       "parent_name": "services.exe"
@@ -2116,18 +2124,6 @@
       "parent_name": "services.exe"
     },
     {
-      "name": "RuntimeBroker.exe",
-      "pid": 6336,
-      "exe": "C:\\Windows\\System32\\RuntimeBroker.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Windows\\System32\\RuntimeBroker.exe",
-        "-Embedding"
-      ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
-    },
-    {
       "name": "conhost.exe",
       "pid": 6372,
       "exe": "C:\\Windows\\System32\\conhost.exe",
@@ -2305,6 +2301,22 @@
       ],
       "ppid": 4928,
       "parent_name": "HidMonitorSvc.exe"
+    },
+    {
+      "name": "svchost.exe",
+      "pid": 6860,
+      "exe": "C:\\Windows\\System32\\svchost.exe",
+      "username": "NT AUTHORITY\\SYSTEM",
+      "cmdline": [
+        "C:\\WINDOWS\\system32\\svchost.exe",
+        "-k",
+        "netsvcs",
+        "-p",
+        "-s",
+        "wuauserv"
+      ],
+      "ppid": 1112,
+      "parent_name": "services.exe"
     },
     {
       "name": "svchost.exe",
@@ -2627,29 +2639,6 @@
       "parent_name": "brave.exe"
     },
     {
-      "name": "msedge.exe",
-      "pid": 8792,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-        "--type=utility",
-        "--utility-sub-type=network.mojom.NetworkService",
-        "--lang=en-GB",
-        "--service-sandbox-type=none",
-        "--no-pre-read-main-dll",
-        "--startup-read-main-dll",
-        "--metrics-shmem-handle=2300,i,16806943923936383028,12643451447861625444,524288",
-        "--field-trial-handle=2452,i,5766457516876976455,9802218841843228224,262144",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190708989122997041",
-        "--mojo-platform-channel-handle=2712",
-        "/prefetch:11"
-      ],
-      "ppid": 40136,
-      "parent_name": "msedge.exe"
-    },
-    {
       "name": "svchost.exe",
       "pid": 8876,
       "exe": "C:\\Windows\\System32\\svchost.exe",
@@ -2754,17 +2743,6 @@
       ],
       "ppid": 2784,
       "parent_name": "igfxCUIService.exe"
-    },
-    {
-      "name": "NisSrv.exe",
-      "pid": 9504,
-      "exe": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25100.9008-0\\NisSrv.exe",
-      "username": "NT AUTHORITY\\LOCAL SERVICE",
-      "cmdline": [
-        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25100.9008-0\\NisSrv.exe"
-      ],
-      "ppid": 1112,
-      "parent_name": "services.exe"
     },
     {
       "name": "RuntimeBroker.exe",
@@ -2947,6 +2925,17 @@
       "parent_name": "svchost.exe"
     },
     {
+      "name": "ShellHost.exe",
+      "pid": 10892,
+      "exe": "C:\\Windows\\System32\\ShellHost.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\Windows\\System32\\ShellHost.exe"
+      ],
+      "ppid": 1812,
+      "parent_name": "sihost.exe"
+    },
+    {
       "name": "svchost.exe",
       "pid": 10916,
       "exe": "C:\\Windows\\System32\\svchost.exe",
@@ -2963,47 +2952,16 @@
       "parent_name": "services.exe"
     },
     {
-      "name": "python.exe",
-      "pid": 11072,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "name": "dllhost.exe",
+      "pid": 11064,
+      "exe": "C:\\Windows\\System32\\dllhost.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
-        "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
-        "C:\\Users\\senat\\PycharmProjects\\Sentinel\\sentinel_agent.py"
+        "C:\\WINDOWS\\system32\\DllHost.exe",
+        "/Processid:{AB8902B4-09CA-4BB6-B78D-A8F59079A8D5}"
       ],
-      "ppid": 41732,
-      "parent_name": "pycharm64.exe"
-    },
-    {
-      "name": "msedgewebview2.exe",
-      "pid": 11268,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--type=utility",
-        "--utility-sub-type=network.mojom.NetworkService",
-        "--lang=en-GB",
-        "--service-sandbox-type=none",
-        "--noerrdialogs",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "--webview-exe-name=WhatsApp.Root.exe",
-        "--webview-exe-version=1.0.0",
-        "--embedded-browser-webview=1",
-        "--no-pre-read-main-dll",
-        "--startup-read-main-dll",
-        "--metrics-shmem-handle=1880,i,7149840711084105407,15795542364872461896,524288",
-        "--field-trial-handle=1904,i,5314385444767061128,14048500719108742976,262144",
-        "--enable-features=ForceSWDCompWhenDCompFallbackRequired,LocalNetworkAccessForFencedFrameNavigationsWarningOnly,LocalNetworkAccessForNavigationsWarningOnly,LocalNetworkAccessForSubframeNavigationsWarningOnly,LocalNetworkAccessForWorkersWarningOnly,msAggressiveCacheTrimming,msCustomDataPartition,msWebView2NoTabForScreenShare,msWindowsTaskManager",
-        "--disable-features=BackForwardCache,BackgroundTabLoadingFromPerformanceManager,CloseOmniboxPopupOnInactiveAreaClick,CollectAVProductsInfo,CollectCodeIntegrityInfo,DeferSpeculativeRFHCreation,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,MediaFoundationCameraUsageMonitoring,PreconnectToSearch,PreloadingEagerHeuristics,SafetyHub,SegmentationPlatform,ServiceWorkerAutoPreload,SpareRendererForSitePerProcess,Ukm,WebPayments,msAITrackerClassification,msAbydosForWindowlessWV2,msAffirmVirtualCard,msAllowChromeWebstore,msAllowMSAPrtSSOForNonMSAProfile,msApplicationGuard,msAskBeforeClosingMultipleTabs,msAutoToggleAADPrtSSOForNonAADProfile,msAutofillEdgeServiceRequest,msAutofillEnableEdgeSuggestions,msAutomaticTabFreeze,msBrowserSettingsSupported,msCoarseGeolocationService,msDataProtection,msDesktopMode,msDesktopRewards,msDisableVariationsSeedFetchThrottling,msEEProactiveHistory,msETFOffstoreExtensionFileDataCollection,msETFPasswordTheftDNRActionSignals,msEdgeAdPlatformUI,msEdgeAddWebCapturetoCollections,msEdgeAutofillShowDeployedPassword,msEdgeCaptureSelectionInPDF,msEdgeCloudConfigService,msEdgeCloudConfigServiceV2,msEdgeCohorts,msEdgeCollectionsPrismExperiment1,msEdgeCollectionsPrismOverallMigration,msEdgeComposeNext,msEdgeEnableNurturingFramework,msEdgeEnclavePrefsBasic,msEdgeEnclavePrefsNotification,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,msEdgeMouseGestureDefaultEnabled,msEdgeMouseGestureSupported,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,msEdgePasswordIrisSaveBubble,msEdgePasswordStrengthCheck,msEdgePinpointFramework,msEdgeProngPersonalization,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,msEdgeShoppingPersistentStorage,msEdgeShoppingUI,msEdgeSmartFind,msEdgeSuperDragDefaultEnabled,msEdgeSuperDragDropSupported,msEdgeTranslate,msEdgeUpdatesMoreMenuPill,msEdgeWebCapture,msEdgeWebCaptureUniformExperience,msEdgeWebContentFilteringFeedback,msEdgeWorkSearchBanner,msEnableCustomJobMemoryLimitsOnXbox,msEnableMIPForPDF,msEnablePdfUpsell,msEnableThirdPartyScanning,msEnableWebSignInCta,msEnableWebToBrowserSignIn,msEndpointDlp,msEntityExtraction,msExtensionTelemetryFramework,msExternalTaskManager,msFileSystemAccessDirectoryIterationBlocklistCheck,msForceBrowserSignIn,msForeignSessionsPage,msGeolocationAccessService,msGeolocationOSLocationPermissionFallback,msGeolocationSQMService,msGeolocationService,msGrowthInfraLaunchSourceLogging,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,msLogIsEdgePinnedToTaskbarOnLaunch,msMIPCrossTenantPdfViewSupport,msMdatpWebSiteDlp,msNotificationPermissionForPWA,msNumberOfSitesToPin,msNurturingGlobalSitePinningOnCloseModal,msNurturingSitePinningCITopSites,msNurturingSitePinningWithWindowsConsent,msOnHoverSearchInSidebar,msOpenOfficeDocumentsInWebViewer,msPageInteractionRestrictionRevoke,msPasswordBreachDetection,msPdfAnnotationsVisibility,msPdfDataRecovery,msPdfDigitalSignatureRead,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,msPdfPopupMarkerRenderer,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPromptDefaultHandlerForPDF,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,msShorelineSearchFindOnPageWebUI,msShowOfflineGameEntrance,msShowReadAloudIconInAddressBar,msShowUXForAADPrtSSOForNonAADProfile,msSitePinningWithoutUi,msSuspendMessageForNewSessionWhenHavingPendingNavigation,msSyncEdgeCollections,msTabResourceStats,msTokenizationAutofillInlineEnabled,msTouchMode,msTriggeringSignalGenerator,msUserUnderstanding,msVideoSuperResolutionUI,msWalletBuyNow,msWalletCheckout,msWalletDiagnosticDataLogger,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,msWalletPasswordCategorization,msWalletPasswordCategorizationPlatformExpansion,msWalletTokenizationCardMetadata,msWalletTokenizedAutofill,msWebAssist,msWebAssistHistorySearchService,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190708989122997041",
-        "--mojo-platform-channel-handle=2160",
-        "/prefetch:11",
-        "/pfhostedapp:15a89a0f420801630eaf614075d31e4069f907f8"
-      ],
-      "ppid": 22020,
-      "parent_name": "msedgewebview2.exe"
+      "ppid": 1256,
+      "parent_name": "svchost.exe"
     },
     {
       "name": "SearchHost.exe",
@@ -3203,6 +3161,17 @@
       "parent_name": "brave.exe"
     },
     {
+      "name": "MpDefenderCoreService.exe",
+      "pid": 12432,
+      "exe": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25110.5-0\\MpDefenderCoreService.exe",
+      "username": "NT AUTHORITY\\SYSTEM",
+      "cmdline": [
+        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25110.5-0\\MpDefenderCoreService.exe"
+      ],
+      "ppid": 1112,
+      "parent_name": "services.exe"
+    },
+    {
       "name": "msedgewebview2.exe",
       "pid": 12544,
       "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
@@ -3258,6 +3227,18 @@
       "parent_name": "sihost.exe"
     },
     {
+      "name": "RuntimeBroker.exe",
+      "pid": 12656,
+      "exe": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\Windows\\System32\\RuntimeBroker.exe",
+        "-Embedding"
+      ],
+      "ppid": 1256,
+      "parent_name": "svchost.exe"
+    },
+    {
       "name": "svchost.exe",
       "pid": 12808,
       "exe": "C:\\Windows\\System32\\svchost.exe",
@@ -3272,32 +3253,6 @@
       ],
       "ppid": 1112,
       "parent_name": "services.exe"
-    },
-    {
-      "name": "ChatGPT.exe",
-      "pid": 12932,
-      "exe": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-        "--type=utility",
-        "--utility-sub-type=network.mojom.NetworkService",
-        "--lang=en-GB",
-        "--service-sandbox-type=none",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT",
-        "--secure-schemes=sentry-ipc",
-        "--bypasscsp-schemes=sentry-ipc",
-        "--cors-schemes=sentry-ipc",
-        "--fetch-schemes=sentry-ipc",
-        "--field-trial-handle=2272,i,5645278673463170915,4446225298338139861,262144",
-        "--enable-features=EnableTransparentHwndEnlargement,FluentScrollbar,PdfUseShowSaveFilePicker",
-        "--disable-features=ScreenAIOCREnabled,SpareRendererForSitePerProcess,WinDelaySpellcheckServiceInit",
-        "--variations-seed-version",
-        "--mojo-platform-channel-handle=2644",
-        "/prefetch:11"
-      ],
-      "ppid": 17344,
-      "parent_name": "ChatGPT.exe"
     },
     {
       "name": "svchost.exe",
@@ -3640,25 +3595,6 @@
       "parent_name": "explorer.exe"
     },
     {
-      "name": "SearchProtocolHost.exe",
-      "pid": 15596,
-      "exe": "C:\\Windows\\System32\\SearchProtocolHost.exe",
-      "username": "NT AUTHORITY\\SYSTEM",
-      "cmdline": [
-        "C:\\WINDOWS\\System32\\SearchProtocolHost.exe",
-        "Global\\UsGthrFltPipeMssGthrPipe86_",
-        "Global\\UsGthrCtrlFltPipeMssGthrPipe86",
-        "1",
-        "-2147483646",
-        "Software\\Microsoft\\Windows Search",
-        "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)",
-        "C:\\ProgramData\\Microsoft\\Search\\Data\\Temp\\usgthrsvc",
-        "DownLevelDaemon"
-      ],
-      "ppid": 1484,
-      "parent_name": "SearchIndexer.exe"
-    },
-    {
       "name": "brave.exe",
       "pid": 15700,
       "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
@@ -3687,6 +3623,37 @@
       ],
       "ppid": 22672,
       "parent_name": "brave.exe"
+    },
+    {
+      "name": "msedge.exe",
+      "pid": 15804,
+      "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "--type=renderer",
+        "--pdf-upsell-enabled",
+        "--dma-cps-flags=2048",
+        "--no-pre-read-main-dll",
+        "--video-capture-use-gpu-memory-buffer",
+        "--lang=en-GB",
+        "--js-flags",
+        "--device-scale-factor=1",
+        "--num-raster-threads=2",
+        "--enable-main-frame-before-activation",
+        "--renderer-client-id=17",
+        "--time-ticks-at-unix-epoch=-1765154085014070",
+        "--launch-time-ticks=287008038117",
+        "--ssd-no-pressure-read-main-dll",
+        "--metrics-shmem-handle=4020,i,18430278146417917420,17609910309669093798,2097152",
+        "--field-trial-handle=2420,i,11307867549392544629,7575912698976290344,262144",
+        "--variations-seed-version",
+        "--trace-process-track-uuid=3190709002241582927",
+        "--mojo-platform-channel-handle=4028",
+        "/prefetch:1"
+      ],
+      "ppid": 34160,
+      "parent_name": "msedge.exe"
     },
     {
       "name": "msedgewebview2.exe",
@@ -3798,31 +3765,6 @@
       "parent_name": "ms-teams.exe"
     },
     {
-      "name": "ChatGPT.exe",
-      "pid": 17224,
-      "exe": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-        "--type=crashpad-handler",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT",
-        "/prefetch:4",
-        "--no-rate-limit",
-        "--monitor-self-annotation=ptype=crashpad-handler",
-        "--database=C:\\Users\\senat\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT\\Crashpad",
-        "--url=https://o33249.ingest.us.sentry.io/api/4507771614265344/minidump/?sentry_key=95e16831cb6713fbf64816ec78a777ef",
-        "--annotation=_productName=ChatGPT",
-        "--annotation=_version=1.2025.328",
-        "--annotation=plat=Win64",
-        "--annotation=prod=Electron",
-        "--annotation=sentry___initialScope={\"release\":\"ChatGPT@1.2025.328\",\"environment\":\"production\",\"tags\":{\"app_session_id\":\"500331da-530e-4249-a5d8-0d4ab76ec71f\",\"environment\":\"production\",\"arch\":\"x86_64\",\"is_quitting\":\"false\"}}",
-        "--annotation=ver=37.4.0",
-        "--initial-client-data=0x6f0,0x6f4,0x6f8,0x6ec,0x6fc,0x7ff65a1c3904,0x7ff65a1c3910,0x7ff65a1c3920"
-      ],
-      "ppid": 17344,
-      "parent_name": "ChatGPT.exe"
-    },
-    {
       "name": "brave.exe",
       "pid": 17252,
       "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
@@ -3883,62 +3825,6 @@
       ],
       "ppid": 13980,
       "parent_name": "msedgewebview2.exe"
-    },
-    {
-      "name": "ChatGPT.exe",
-      "pid": 17344,
-      "exe": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
-      ],
-      "ppid": 1812,
-      "parent_name": "sihost.exe"
-    },
-    {
-      "name": "Blip.exe",
-      "pid": 17572,
-      "exe": "C:\\Program Files\\WindowsApps\\BlipStudioInc.BlipApp_1.1.9.0_x64__eydxbjyejh39j\\bin\\Blip.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\WindowsApps\\BlipStudioInc.BlipApp_1.1.9.0_x64__eydxbjyejh39j\\bin\\Blip.exe",
-        "/background"
-      ],
-      "ppid": 17532,
-      "parent_name": null
-    },
-    {
-      "name": "ChatGPT.exe",
-      "pid": 18500,
-      "exe": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-        "--type=renderer",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT",
-        "--secure-schemes=sentry-ipc",
-        "--bypasscsp-schemes=sentry-ipc",
-        "--cors-schemes=sentry-ipc",
-        "--fetch-schemes=sentry-ipc",
-        "--app-path=C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\resources\\app.asar",
-        "--enable-sandbox",
-        "--video-capture-use-gpu-memory-buffer",
-        "--lang=en-GB",
-        "--device-scale-factor=1",
-        "--num-raster-threads=2",
-        "--enable-main-frame-before-activation",
-        "--renderer-client-id=5",
-        "--time-ticks-at-unix-epoch=-1765154086043695",
-        "--launch-time-ticks=71002834948",
-        "--field-trial-handle=2272,i,5645278673463170915,4446225298338139861,262144",
-        "--enable-features=EnableTransparentHwndEnlargement,FluentScrollbar,PdfUseShowSaveFilePicker",
-        "--disable-features=ScreenAIOCREnabled,SpareRendererForSitePerProcess,WinDelaySpellcheckServiceInit",
-        "--variations-seed-version",
-        "--mojo-platform-channel-handle=4340",
-        "/prefetch:1"
-      ],
-      "ppid": 17344,
-      "parent_name": "ChatGPT.exe"
     },
     {
       "name": "brave.exe",
@@ -4086,19 +3972,6 @@
       "parent_name": "svchost.exe"
     },
     {
-      "name": "NGenuity2Helper.exe",
-      "pid": 19552,
-      "exe": "C:\\Program Files\\WindowsApps\\33C30B79.HyperXNGenuity_5.35.0.0_x64__0a78dr3hq0pvt\\Assets\\Native\\NGenuity2Helper.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\WindowsApps\\33C30B79.HyperXNGenuity_5.35.0.0_x64__0a78dr3hq0pvt\\Assets\\Native\\NGenuity2Helper.exe",
-        "/InvokerPRAID:",
-        "App"
-      ],
-      "ppid": 1812,
-      "parent_name": "sihost.exe"
-    },
-    {
       "name": "brave.exe",
       "pid": 20008,
       "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
@@ -4168,26 +4041,6 @@
       "parent_name": "services.exe"
     },
     {
-      "name": "ChatGPT.exe",
-      "pid": 20804,
-      "exe": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-        "--type=gpu-process",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT",
-        "--gpu-preferences=UAAAAAAAAADgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA",
-        "--field-trial-handle=2272,i,5645278673463170915,4446225298338139861,262144",
-        "--enable-features=EnableTransparentHwndEnlargement,FluentScrollbar,PdfUseShowSaveFilePicker",
-        "--disable-features=ScreenAIOCREnabled,SpareRendererForSitePerProcess,WinDelaySpellcheckServiceInit",
-        "--variations-seed-version",
-        "--mojo-platform-channel-handle=2268",
-        "/prefetch:2"
-      ],
-      "ppid": 17344,
-      "parent_name": "ChatGPT.exe"
-    },
-    {
       "name": "svchost.exe",
       "pid": 20888,
       "exe": "C:\\Windows\\System32\\svchost.exe",
@@ -4233,22 +4086,6 @@
       "parent_name": "brave.exe"
     },
     {
-      "name": "svchost.exe",
-      "pid": 20960,
-      "exe": "C:\\Windows\\System32\\svchost.exe",
-      "username": "NT AUTHORITY\\SYSTEM",
-      "cmdline": [
-        "C:\\WINDOWS\\System32\\svchost.exe",
-        "-k",
-        "wsappx",
-        "-p",
-        "-s",
-        "ClipSVC"
-      ],
-      "ppid": 1112,
-      "parent_name": "services.exe"
-    },
-    {
       "name": "brave.exe",
       "pid": 21084,
       "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
@@ -4291,15 +4128,16 @@
       "parent_name": "services.exe"
     },
     {
-      "name": "WhatsApp.Root.exe",
-      "pid": 21668,
-      "exe": "C:\\Program Files\\WindowsApps\\5319275A.WhatsAppDesktop_2.2587.8.0_x64__cv1g1gvanyjgm\\WhatsApp.Root.exe",
+      "name": "conhost.exe",
+      "pid": 21496,
+      "exe": "C:\\Windows\\System32\\conhost.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
-        "C:\\Program Files\\WindowsApps\\5319275A.WhatsAppDesktop_2.2587.8.0_x64__cv1g1gvanyjgm\\WhatsApp.Root.exe"
+        "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
+        "0x4"
       ],
-      "ppid": 1812,
-      "parent_name": "sihost.exe"
+      "ppid": 41476,
+      "parent_name": "python.exe"
     },
     {
       "name": "AppVShNotify.exe",
@@ -4354,165 +4192,15 @@
       "parent_name": "brave.exe"
     },
     {
-      "name": "RuntimeBroker.exe",
-      "pid": 21920,
-      "exe": "C:\\Windows\\System32\\RuntimeBroker.exe",
-      "username": "SENATOR\\senat",
+      "name": "WmiPrvSE.exe",
+      "pid": 22512,
+      "exe": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+      "username": "NT AUTHORITY\\NETWORK SERVICE",
       "cmdline": [
-        "C:\\Windows\\System32\\RuntimeBroker.exe",
-        "-Embedding"
+        "C:\\WINDOWS\\system32\\wbem\\wmiprvse.exe"
       ],
       "ppid": 1256,
       "parent_name": "svchost.exe"
-    },
-    {
-      "name": "msedgewebview2.exe",
-      "pid": 22016,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--type=renderer",
-        "--noerrdialogs",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "--webview-exe-name=WhatsApp.Root.exe",
-        "--webview-exe-version=1.0.0",
-        "--embedded-browser-webview=1",
-        "--dma-cps-flags=0",
-        "--no-pre-read-main-dll",
-        "--disable-gpu-compositing",
-        "--video-capture-use-gpu-memory-buffer",
-        "--lang=en-GB",
-        "--device-scale-factor=1",
-        "--num-raster-threads=2",
-        "--enable-main-frame-before-activation",
-        "--renderer-client-id=8",
-        "--js-flags=--expose-gc --ms-user-locale=",
-        "--time-ticks-at-unix-epoch=-1765154086043697",
-        "--launch-time-ticks=71074050020",
-        "--skip-read-main-dll",
-        "--metrics-shmem-handle=4732,i,7207726843836285547,4473677316942995500,2097152",
-        "--field-trial-handle=1904,i,5314385444767061128,14048500719108742976,262144",
-        "--enable-features=ForceSWDCompWhenDCompFallbackRequired,LocalNetworkAccessForFencedFrameNavigationsWarningOnly,LocalNetworkAccessForNavigationsWarningOnly,LocalNetworkAccessForSubframeNavigationsWarningOnly,LocalNetworkAccessForWorkersWarningOnly,msAggressiveCacheTrimming,msCustomDataPartition,msWebView2NoTabForScreenShare,msWindowsTaskManager",
-        "--disable-features=BackForwardCache,BackgroundTabLoadingFromPerformanceManager,CloseOmniboxPopupOnInactiveAreaClick,CollectAVProductsInfo,CollectCodeIntegrityInfo,DeferSpeculativeRFHCreation,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,MediaFoundationCameraUsageMonitoring,PreconnectToSearch,PreloadingEagerHeuristics,SafetyHub,SegmentationPlatform,ServiceWorkerAutoPreload,SpareRendererForSitePerProcess,Ukm,WebPayments,msAITrackerClassification,msAbydosForWindowlessWV2,msAffirmVirtualCard,msAllowChromeWebstore,msAllowMSAPrtSSOForNonMSAProfile,msApplicationGuard,msAskBeforeClosingMultipleTabs,msAutoToggleAADPrtSSOForNonAADProfile,msAutofillEdgeServiceRequest,msAutofillEnableEdgeSuggestions,msAutomaticTabFreeze,msBrowserSettingsSupported,msCoarseGeolocationService,msDataProtection,msDesktopMode,msDesktopRewards,msDisableVariationsSeedFetchThrottling,msEEProactiveHistory,msETFOffstoreExtensionFileDataCollection,msETFPasswordTheftDNRActionSignals,msEdgeAdPlatformUI,msEdgeAddWebCapturetoCollections,msEdgeAutofillShowDeployedPassword,msEdgeCaptureSelectionInPDF,msEdgeCloudConfigService,msEdgeCloudConfigServiceV2,msEdgeCohorts,msEdgeCollectionsPrismExperiment1,msEdgeCollectionsPrismOverallMigration,msEdgeComposeNext,msEdgeEnableNurturingFramework,msEdgeEnclavePrefsBasic,msEdgeEnclavePrefsNotification,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,msEdgeMouseGestureDefaultEnabled,msEdgeMouseGestureSupported,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,msEdgePasswordIrisSaveBubble,msEdgePasswordStrengthCheck,msEdgePinpointFramework,msEdgeProngPersonalization,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,msEdgeShoppingPersistentStorage,msEdgeShoppingUI,msEdgeSmartFind,msEdgeSuperDragDefaultEnabled,msEdgeSuperDragDropSupported,msEdgeTranslate,msEdgeUpdatesMoreMenuPill,msEdgeWebCapture,msEdgeWebCaptureUniformExperience,msEdgeWebContentFilteringFeedback,msEdgeWorkSearchBanner,msEnableCustomJobMemoryLimitsOnXbox,msEnableMIPForPDF,msEnablePdfUpsell,msEnableThirdPartyScanning,msEnableWebSignInCta,msEnableWebToBrowserSignIn,msEndpointDlp,msEntityExtraction,msExtensionTelemetryFramework,msExternalTaskManager,msFileSystemAccessDirectoryIterationBlocklistCheck,msForceBrowserSignIn,msForeignSessionsPage,msGeolocationAccessService,msGeolocationOSLocationPermissionFallback,msGeolocationSQMService,msGeolocationService,msGrowthInfraLaunchSourceLogging,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,msLogIsEdgePinnedToTaskbarOnLaunch,msMIPCrossTenantPdfViewSupport,msMdatpWebSiteDlp,msNotificationPermissionForPWA,msNumberOfSitesToPin,msNurturingGlobalSitePinningOnCloseModal,msNurturingSitePinningCITopSites,msNurturingSitePinningWithWindowsConsent,msOnHoverSearchInSidebar,msOpenOfficeDocumentsInWebViewer,msPageInteractionRestrictionRevoke,msPasswordBreachDetection,msPdfAnnotationsVisibility,msPdfDataRecovery,msPdfDigitalSignatureRead,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,msPdfPopupMarkerRenderer,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPromptDefaultHandlerForPDF,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,msShorelineSearchFindOnPageWebUI,msShowOfflineGameEntrance,msShowReadAloudIconInAddressBar,msShowUXForAADPrtSSOForNonAADProfile,msSitePinningWithoutUi,msSuspendMessageForNewSessionWhenHavingPendingNavigation,msSyncEdgeCollections,msTabResourceStats,msTokenizationAutofillInlineEnabled,msTouchMode,msTriggeringSignalGenerator,msUserUnderstanding,msVideoSuperResolutionUI,msWalletBuyNow,msWalletCheckout,msWalletDiagnosticDataLogger,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,msWalletPasswordCategorization,msWalletPasswordCategorizationPlatformExpansion,msWalletTokenizationCardMetadata,msWalletTokenizedAutofill,msWebAssist,msWebAssistHistorySearchService,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190708993808206286",
-        "--mojo-platform-channel-handle=4824",
-        "/pfhostedapp:15a89a0f420801630eaf614075d31e4069f907f8",
-        "/prefetch:1"
-      ],
-      "ppid": 22020,
-      "parent_name": "msedgewebview2.exe"
-    },
-    {
-      "name": "msedgewebview2.exe",
-      "pid": 22020,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--embedded-browser-webview=1",
-        "--webview-exe-name=WhatsApp.Root.exe",
-        "--webview-exe-version=1.0.0",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "--noerrdialogs",
-        "--edge-webview-disable-crash-reporting=1",
-        "--embedded-browser-webview-enable-extension",
-        "--disable-gpu",
-        "--edge-webview-is-background",
-        "--mojo-named-platform-channel-pipe=21668.22032.16414886294198154783",
-        "/pfhostedapp:15a89a0f420801630eaf614075d31e4069f907f8"
-      ],
-      "ppid": 21668,
-      "parent_name": "WhatsApp.Root.exe"
-    },
-    {
-      "name": "msedgewebview2.exe",
-      "pid": 22100,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--type=crashpad-handler",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "/prefetch:4",
-        "/pfhostedapp:15a89a0f420801630eaf614075d31e4069f907f8",
-        "--monitor-self-annotation=ptype=crashpad-handler",
-        "--database=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView\\Crashpad",
-        "--metrics-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "--annotation=IsOfficialBuild=1",
-        "--annotation=channel=",
-        "--annotation=chromium-version=142.0.7444.176",
-        "--annotation=exe=C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--annotation=plat=Win64",
-        "--annotation=prod=Edge WebView2",
-        "--annotation=ver=142.0.3595.94",
-        "--initial-client-data=0x178,0x17c,0x180,0x154,0x184,0x7ffd166edb58,0x7ffd166edb64,0x7ffd166edb70"
-      ],
-      "ppid": 22020,
-      "parent_name": "msedgewebview2.exe"
-    },
-    {
-      "name": "msedgewebview2.exe",
-      "pid": 22312,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--type=gpu-process",
-        "--noerrdialogs",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "--webview-exe-name=WhatsApp.Root.exe",
-        "--webview-exe-version=1.0.0",
-        "--embedded-browser-webview=1",
-        "--no-pre-read-main-dll",
-        "--gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA==",
-        "--use-gl=angle",
-        "--use-angle=swiftshader-webgl",
-        "--startup-read-main-dll",
-        "--metrics-shmem-handle=1688,i,17114750068564860211,4855907105917860494,262144",
-        "--field-trial-handle=1904,i,5314385444767061128,14048500719108742976,262144",
-        "--enable-features=ForceSWDCompWhenDCompFallbackRequired,LocalNetworkAccessForFencedFrameNavigationsWarningOnly,LocalNetworkAccessForNavigationsWarningOnly,LocalNetworkAccessForSubframeNavigationsWarningOnly,LocalNetworkAccessForWorkersWarningOnly,msAggressiveCacheTrimming,msCustomDataPartition,msWebView2NoTabForScreenShare,msWindowsTaskManager",
-        "--disable-features=BackForwardCache,BackgroundTabLoadingFromPerformanceManager,CloseOmniboxPopupOnInactiveAreaClick,CollectAVProductsInfo,CollectCodeIntegrityInfo,DeferSpeculativeRFHCreation,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,MediaFoundationCameraUsageMonitoring,PreconnectToSearch,PreloadingEagerHeuristics,SafetyHub,SegmentationPlatform,ServiceWorkerAutoPreload,SpareRendererForSitePerProcess,Ukm,WebPayments,msAITrackerClassification,msAbydosForWindowlessWV2,msAffirmVirtualCard,msAllowChromeWebstore,msAllowMSAPrtSSOForNonMSAProfile,msApplicationGuard,msAskBeforeClosingMultipleTabs,msAutoToggleAADPrtSSOForNonAADProfile,msAutofillEdgeServiceRequest,msAutofillEnableEdgeSuggestions,msAutomaticTabFreeze,msBrowserSettingsSupported,msCoarseGeolocationService,msDataProtection,msDesktopMode,msDesktopRewards,msDisableVariationsSeedFetchThrottling,msEEProactiveHistory,msETFOffstoreExtensionFileDataCollection,msETFPasswordTheftDNRActionSignals,msEdgeAdPlatformUI,msEdgeAddWebCapturetoCollections,msEdgeAutofillShowDeployedPassword,msEdgeCaptureSelectionInPDF,msEdgeCloudConfigService,msEdgeCloudConfigServiceV2,msEdgeCohorts,msEdgeCollectionsPrismExperiment1,msEdgeCollectionsPrismOverallMigration,msEdgeComposeNext,msEdgeEnableNurturingFramework,msEdgeEnclavePrefsBasic,msEdgeEnclavePrefsNotification,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,msEdgeMouseGestureDefaultEnabled,msEdgeMouseGestureSupported,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,msEdgePasswordIrisSaveBubble,msEdgePasswordStrengthCheck,msEdgePinpointFramework,msEdgeProngPersonalization,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,msEdgeShoppingPersistentStorage,msEdgeShoppingUI,msEdgeSmartFind,msEdgeSuperDragDefaultEnabled,msEdgeSuperDragDropSupported,msEdgeTranslate,msEdgeUpdatesMoreMenuPill,msEdgeWebCapture,msEdgeWebCaptureUniformExperience,msEdgeWebContentFilteringFeedback,msEdgeWorkSearchBanner,msEnableCustomJobMemoryLimitsOnXbox,msEnableMIPForPDF,msEnablePdfUpsell,msEnableThirdPartyScanning,msEnableWebSignInCta,msEnableWebToBrowserSignIn,msEndpointDlp,msEntityExtraction,msExtensionTelemetryFramework,msExternalTaskManager,msFileSystemAccessDirectoryIterationBlocklistCheck,msForceBrowserSignIn,msForeignSessionsPage,msGeolocationAccessService,msGeolocationOSLocationPermissionFallback,msGeolocationSQMService,msGeolocationService,msGrowthInfraLaunchSourceLogging,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,msLogIsEdgePinnedToTaskbarOnLaunch,msMIPCrossTenantPdfViewSupport,msMdatpWebSiteDlp,msNotificationPermissionForPWA,msNumberOfSitesToPin,msNurturingGlobalSitePinningOnCloseModal,msNurturingSitePinningCITopSites,msNurturingSitePinningWithWindowsConsent,msOnHoverSearchInSidebar,msOpenOfficeDocumentsInWebViewer,msPageInteractionRestrictionRevoke,msPasswordBreachDetection,msPdfAnnotationsVisibility,msPdfDataRecovery,msPdfDigitalSignatureRead,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,msPdfPopupMarkerRenderer,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPromptDefaultHandlerForPDF,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,msShorelineSearchFindOnPageWebUI,msShowOfflineGameEntrance,msShowReadAloudIconInAddressBar,msShowUXForAADPrtSSOForNonAADProfile,msSitePinningWithoutUi,msSuspendMessageForNewSessionWhenHavingPendingNavigation,msSyncEdgeCollections,msTabResourceStats,msTokenizationAutofillInlineEnabled,msTouchMode,msTriggeringSignalGenerator,msUserUnderstanding,msVideoSuperResolutionUI,msWalletBuyNow,msWalletCheckout,msWalletDiagnosticDataLogger,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,msWalletPasswordCategorization,msWalletPasswordCategorizationPlatformExpansion,msWalletTokenizationCardMetadata,msWalletTokenizedAutofill,msWebAssist,msWebAssistHistorySearchService,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190708988185955192",
-        "--mojo-platform-channel-handle=1900",
-        "/prefetch:2",
-        "/pfhostedapp:15a89a0f420801630eaf614075d31e4069f907f8"
-      ],
-      "ppid": 22020,
-      "parent_name": "msedgewebview2.exe"
-    },
-    {
-      "name": "msedgewebview2.exe",
-      "pid": 22356,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--type=utility",
-        "--utility-sub-type=storage.mojom.StorageService",
-        "--lang=en-GB",
-        "--service-sandbox-type=service",
-        "--noerrdialogs",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "--webview-exe-name=WhatsApp.Root.exe",
-        "--webview-exe-version=1.0.0",
-        "--embedded-browser-webview=1",
-        "--no-pre-read-main-dll",
-        "--startup-read-main-dll",
-        "--metrics-shmem-handle=2084,i,1916880974318790381,8991022694579481667,524288",
-        "--field-trial-handle=1904,i,5314385444767061128,14048500719108742976,262144",
-        "--enable-features=ForceSWDCompWhenDCompFallbackRequired,LocalNetworkAccessForFencedFrameNavigationsWarningOnly,LocalNetworkAccessForNavigationsWarningOnly,LocalNetworkAccessForSubframeNavigationsWarningOnly,LocalNetworkAccessForWorkersWarningOnly,msAggressiveCacheTrimming,msCustomDataPartition,msWebView2NoTabForScreenShare,msWindowsTaskManager",
-        "--disable-features=BackForwardCache,BackgroundTabLoadingFromPerformanceManager,CloseOmniboxPopupOnInactiveAreaClick,CollectAVProductsInfo,CollectCodeIntegrityInfo,DeferSpeculativeRFHCreation,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,MediaFoundationCameraUsageMonitoring,PreconnectToSearch,PreloadingEagerHeuristics,SafetyHub,SegmentationPlatform,ServiceWorkerAutoPreload,SpareRendererForSitePerProcess,Ukm,WebPayments,msAITrackerClassification,msAbydosForWindowlessWV2,msAffirmVirtualCard,msAllowChromeWebstore,msAllowMSAPrtSSOForNonMSAProfile,msApplicationGuard,msAskBeforeClosingMultipleTabs,msAutoToggleAADPrtSSOForNonAADProfile,msAutofillEdgeServiceRequest,msAutofillEnableEdgeSuggestions,msAutomaticTabFreeze,msBrowserSettingsSupported,msCoarseGeolocationService,msDataProtection,msDesktopMode,msDesktopRewards,msDisableVariationsSeedFetchThrottling,msEEProactiveHistory,msETFOffstoreExtensionFileDataCollection,msETFPasswordTheftDNRActionSignals,msEdgeAdPlatformUI,msEdgeAddWebCapturetoCollections,msEdgeAutofillShowDeployedPassword,msEdgeCaptureSelectionInPDF,msEdgeCloudConfigService,msEdgeCloudConfigServiceV2,msEdgeCohorts,msEdgeCollectionsPrismExperiment1,msEdgeCollectionsPrismOverallMigration,msEdgeComposeNext,msEdgeEnableNurturingFramework,msEdgeEnclavePrefsBasic,msEdgeEnclavePrefsNotification,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,msEdgeMouseGestureDefaultEnabled,msEdgeMouseGestureSupported,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,msEdgePasswordIrisSaveBubble,msEdgePasswordStrengthCheck,msEdgePinpointFramework,msEdgeProngPersonalization,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,msEdgeShoppingPersistentStorage,msEdgeShoppingUI,msEdgeSmartFind,msEdgeSuperDragDefaultEnabled,msEdgeSuperDragDropSupported,msEdgeTranslate,msEdgeUpdatesMoreMenuPill,msEdgeWebCapture,msEdgeWebCaptureUniformExperience,msEdgeWebContentFilteringFeedback,msEdgeWorkSearchBanner,msEnableCustomJobMemoryLimitsOnXbox,msEnableMIPForPDF,msEnablePdfUpsell,msEnableThirdPartyScanning,msEnableWebSignInCta,msEnableWebToBrowserSignIn,msEndpointDlp,msEntityExtraction,msExtensionTelemetryFramework,msExternalTaskManager,msFileSystemAccessDirectoryIterationBlocklistCheck,msForceBrowserSignIn,msForeignSessionsPage,msGeolocationAccessService,msGeolocationOSLocationPermissionFallback,msGeolocationSQMService,msGeolocationService,msGrowthInfraLaunchSourceLogging,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,msLogIsEdgePinnedToTaskbarOnLaunch,msMIPCrossTenantPdfViewSupport,msMdatpWebSiteDlp,msNotificationPermissionForPWA,msNumberOfSitesToPin,msNurturingGlobalSitePinningOnCloseModal,msNurturingSitePinningCITopSites,msNurturingSitePinningWithWindowsConsent,msOnHoverSearchInSidebar,msOpenOfficeDocumentsInWebViewer,msPageInteractionRestrictionRevoke,msPasswordBreachDetection,msPdfAnnotationsVisibility,msPdfDataRecovery,msPdfDigitalSignatureRead,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,msPdfPopupMarkerRenderer,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPromptDefaultHandlerForPDF,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,msShorelineSearchFindOnPageWebUI,msShowOfflineGameEntrance,msShowReadAloudIconInAddressBar,msShowUXForAADPrtSSOForNonAADProfile,msSitePinningWithoutUi,msSuspendMessageForNewSessionWhenHavingPendingNavigation,msSyncEdgeCollections,msTabResourceStats,msTokenizationAutofillInlineEnabled,msTouchMode,msTriggeringSignalGenerator,msUserUnderstanding,msVideoSuperResolutionUI,msWalletBuyNow,msWalletCheckout,msWalletDiagnosticDataLogger,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,msWalletPasswordCategorization,msWalletPasswordCategorizationPlatformExpansion,msWalletTokenizationCardMetadata,msWalletTokenizedAutofill,msWebAssist,msWebAssistHistorySearchService,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190708990060038890",
-        "--mojo-platform-channel-handle=2348",
-        "/prefetch:13",
-        "/pfhostedapp:15a89a0f420801630eaf614075d31e4069f907f8"
-      ],
-      "ppid": 22020,
-      "parent_name": "msedgewebview2.exe"
     },
     {
       "name": "brave.exe",
@@ -4562,6 +4250,18 @@
       ],
       "ppid": 22672,
       "parent_name": "brave.exe"
+    },
+    {
+      "name": "RuntimeBroker.exe",
+      "pid": 22852,
+      "exe": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\Windows\\System32\\RuntimeBroker.exe",
+        "-Embedding"
+      ],
+      "ppid": 1256,
+      "parent_name": "svchost.exe"
     },
     {
       "name": "brave.exe",
@@ -4770,40 +4470,6 @@
       "parent_name": "brave.exe"
     },
     {
-      "name": "Figma.exe",
-      "pid": 23996,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-        "--type=renderer",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Roaming\\Figma\\DesktopProfile\\v38",
-        "--standard-schemes=file",
-        "--secure-schemes=desktop-file",
-        "--fetch-schemes=desktop-file,file",
-        "--streaming-schemes=file",
-        "--app-user-model-id=com.squirrel.Figma.Figma",
-        "--app-path=C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\resources\\app.asar",
-        "--enable-sandbox",
-        "--video-capture-use-gpu-memory-buffer",
-        "--lang=en-GB",
-        "--device-scale-factor=1",
-        "--num-raster-threads=2",
-        "--enable-main-frame-before-activation",
-        "--renderer-client-id=10",
-        "--time-ticks-at-unix-epoch=-1765154086043695",
-        "--launch-time-ticks=76269939917",
-        "--field-trial-handle=1796,i,17279995187569127127,16522027544932896517,262144",
-        "--enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker",
-        "--disable-features=ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation,WinDelaySpellcheckServiceInit",
-        "--variations-seed-version",
-        "--mojo-platform-channel-handle=4504",
-        "/prefetch:1"
-      ],
-      "ppid": 27496,
-      "parent_name": "Figma.exe"
-    },
-    {
       "name": "brave.exe",
       "pid": 24136,
       "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
@@ -4874,63 +4540,43 @@
       "parent_name": "svchost.exe"
     },
     {
+      "name": "SearchFilterHost.exe",
+      "pid": 24588,
+      "exe": "C:\\Windows\\System32\\SearchFilterHost.exe",
+      "username": "NT AUTHORITY\\SYSTEM",
+      "cmdline": [
+        "C:\\WINDOWS\\System32\\SearchFilterHost.exe",
+        "900",
+        "3028",
+        "3008",
+        "884",
+        "{5E941D80-BF96-11CD-B579-08002B30BFEB}"
+      ],
+      "ppid": 1484,
+      "parent_name": "SearchIndexer.exe"
+    },
+    {
       "name": "msedge.exe",
-      "pid": 24516,
+      "pid": 24780,
       "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
         "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-        "--type=gpu-process",
-        "--no-pre-read-main-dll",
-        "--gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA==",
-        "--startup-read-main-dll",
-        "--metrics-shmem-handle=2112,i,2804521659763387221,15987241817357164413,262144",
-        "--field-trial-handle=2452,i,5766457516876976455,9802218841843228224,262144",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190708988185955192",
-        "--mojo-platform-channel-handle=2416",
-        "/prefetch:2"
-      ],
-      "ppid": 40136,
-      "parent_name": "msedge.exe"
-    },
-    {
-      "name": "WmiPrvSE.exe",
-      "pid": 25444,
-      "exe": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
-      "username": "NT AUTHORITY\\NETWORK SERVICE",
-      "cmdline": [
-        "C:\\WINDOWS\\system32\\wbem\\wmiprvse.exe"
-      ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
-    },
-    {
-      "name": "Figma.exe",
-      "pid": 25652,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
         "--type=utility",
-        "--utility-sub-type=node.mojom.NodeService",
+        "--utility-sub-type=storage.mojom.StorageService",
         "--lang=en-GB",
-        "--service-sandbox-type=none",
-        "--video-capture-use-gpu-memory-buffer",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Roaming\\Figma\\DesktopProfile\\v38",
-        "--standard-schemes=file",
-        "--secure-schemes=desktop-file",
-        "--fetch-schemes=desktop-file,file",
-        "--streaming-schemes=file",
-        "--field-trial-handle=1796,i,17279995187569127127,16522027544932896517,262144",
-        "--enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker",
-        "--disable-features=ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation,WinDelaySpellcheckServiceInit",
+        "--service-sandbox-type=service",
+        "--no-pre-read-main-dll",
+        "--startup-read-main-dll",
+        "--metrics-shmem-handle=2624,i,12739236566616743456,5418460058109582466,524288",
+        "--field-trial-handle=2420,i,11307867549392544629,7575912698976290344,262144",
         "--variations-seed-version",
-        "--mojo-platform-channel-handle=3940",
-        "/prefetch:14"
+        "--trace-process-track-uuid=3190708990060038890",
+        "--mojo-platform-channel-handle=2788",
+        "/prefetch:13"
       ],
-      "ppid": 27496,
-      "parent_name": "Figma.exe"
+      "ppid": 34160,
+      "parent_name": "msedge.exe"
     },
     {
       "name": "backgroundTaskHost.exe",
@@ -4945,35 +4591,34 @@
       "parent_name": "svchost.exe"
     },
     {
-      "name": "msedgewebview2.exe",
-      "pid": 26872,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
+      "name": "brave.exe",
+      "pid": 26236,
+      "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-        "--type=utility",
-        "--utility-sub-type=audio.mojom.AudioService",
-        "--lang=en-GB",
-        "--service-sandbox-type=audio",
-        "--noerrdialogs",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\EBWebView",
-        "--webview-exe-name=WhatsApp.Root.exe",
-        "--webview-exe-version=1.0.0",
-        "--embedded-browser-webview=1",
+        "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "--type=renderer",
+        "--enable-distillability-service",
+        "--origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU=",
         "--no-pre-read-main-dll",
-        "--skip-read-main-dll",
-        "--metrics-shmem-handle=828,i,13283443700585290187,11766001469889136092,524288",
-        "--field-trial-handle=1904,i,5314385444767061128,14048500719108742976,262144",
-        "--enable-features=ForceSWDCompWhenDCompFallbackRequired,LocalNetworkAccessForFencedFrameNavigationsWarningOnly,LocalNetworkAccessForNavigationsWarningOnly,LocalNetworkAccessForSubframeNavigationsWarningOnly,LocalNetworkAccessForWorkersWarningOnly,msAggressiveCacheTrimming,msCustomDataPartition,msWebView2NoTabForScreenShare,msWindowsTaskManager",
-        "--disable-features=BackForwardCache,BackgroundTabLoadingFromPerformanceManager,CloseOmniboxPopupOnInactiveAreaClick,CollectAVProductsInfo,CollectCodeIntegrityInfo,DeferSpeculativeRFHCreation,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,MediaFoundationCameraUsageMonitoring,PreconnectToSearch,PreloadingEagerHeuristics,SafetyHub,SegmentationPlatform,ServiceWorkerAutoPreload,SpareRendererForSitePerProcess,Ukm,WebPayments,msAITrackerClassification,msAbydosForWindowlessWV2,msAffirmVirtualCard,msAllowChromeWebstore,msAllowMSAPrtSSOForNonMSAProfile,msApplicationGuard,msAskBeforeClosingMultipleTabs,msAutoToggleAADPrtSSOForNonAADProfile,msAutofillEdgeServiceRequest,msAutofillEnableEdgeSuggestions,msAutomaticTabFreeze,msBrowserSettingsSupported,msCoarseGeolocationService,msDataProtection,msDesktopMode,msDesktopRewards,msDisableVariationsSeedFetchThrottling,msEEProactiveHistory,msETFOffstoreExtensionFileDataCollection,msETFPasswordTheftDNRActionSignals,msEdgeAdPlatformUI,msEdgeAddWebCapturetoCollections,msEdgeAutofillShowDeployedPassword,msEdgeCaptureSelectionInPDF,msEdgeCloudConfigService,msEdgeCloudConfigServiceV2,msEdgeCohorts,msEdgeCollectionsPrismExperiment1,msEdgeCollectionsPrismOverallMigration,msEdgeComposeNext,msEdgeEnableNurturingFramework,msEdgeEnclavePrefsBasic,msEdgeEnclavePrefsNotification,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,msEdgeMouseGestureDefaultEnabled,msEdgeMouseGestureSupported,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,msEdgePasswordIrisSaveBubble,msEdgePasswordStrengthCheck,msEdgePinpointFramework,msEdgeProngPersonalization,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,msEdgeShoppingPersistentStorage,msEdgeShoppingUI,msEdgeSmartFind,msEdgeSuperDragDefaultEnabled,msEdgeSuperDragDropSupported,msEdgeTranslate,msEdgeUpdatesMoreMenuPill,msEdgeWebCapture,msEdgeWebCaptureUniformExperience,msEdgeWebContentFilteringFeedback,msEdgeWorkSearchBanner,msEnableCustomJobMemoryLimitsOnXbox,msEnableMIPForPDF,msEnablePdfUpsell,msEnableThirdPartyScanning,msEnableWebSignInCta,msEnableWebToBrowserSignIn,msEndpointDlp,msEntityExtraction,msExtensionTelemetryFramework,msExternalTaskManager,msFileSystemAccessDirectoryIterationBlocklistCheck,msForceBrowserSignIn,msForeignSessionsPage,msGeolocationAccessService,msGeolocationOSLocationPermissionFallback,msGeolocationSQMService,msGeolocationService,msGrowthInfraLaunchSourceLogging,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,msLogIsEdgePinnedToTaskbarOnLaunch,msMIPCrossTenantPdfViewSupport,msMdatpWebSiteDlp,msNotificationPermissionForPWA,msNumberOfSitesToPin,msNurturingGlobalSitePinningOnCloseModal,msNurturingSitePinningCITopSites,msNurturingSitePinningWithWindowsConsent,msOnHoverSearchInSidebar,msOpenOfficeDocumentsInWebViewer,msPageInteractionRestrictionRevoke,msPasswordBreachDetection,msPdfAnnotationsVisibility,msPdfDataRecovery,msPdfDigitalSignatureRead,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,msPdfPopupMarkerRenderer,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPromptDefaultHandlerForPDF,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,msShorelineSearchFindOnPageWebUI,msShowOfflineGameEntrance,msShowReadAloudIconInAddressBar,msShowUXForAADPrtSSOForNonAADProfile,msSitePinningWithoutUi,msSuspendMessageForNewSessionWhenHavingPendingNavigation,msSyncEdgeCollections,msTabResourceStats,msTokenizationAutofillInlineEnabled,msTouchMode,msTriggeringSignalGenerator,msUserUnderstanding,msVideoSuperResolutionUI,msWalletBuyNow,msWalletCheckout,msWalletDiagnosticDataLogger,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,msWalletPasswordCategorization,msWalletPasswordCategorizationPlatformExpansion,msWalletTokenizationCardMetadata,msWalletTokenizedAutofill,msWebAssist,msWebAssistHistorySearchService,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190709005052708474",
-        "--mojo-platform-channel-handle=4536",
-        "/prefetch:12",
-        "/pfhostedapp:15a89a0f420801630eaf614075d31e4069f907f8"
+        "--start-stack-profiler",
+        "--video-capture-use-gpu-memory-buffer",
+        "--lang=en-GB",
+        "--device-scale-factor=1",
+        "--num-raster-threads=2",
+        "--enable-main-frame-before-activation",
+        "--renderer-client-id=2407",
+        "--time-ticks-at-unix-epoch=-1765154086043695",
+        "--launch-time-ticks=299243688302",
+        "--metrics-shmem-handle=9488,i,10506178534429119934,16504911114427219037,2097152",
+        "--field-trial-handle=2372,i,9557323275121780777,12798466449319400985,262144",
+        "--variations-seed-version=main@8ede84b65cb4d9cdc90358f8a10de1dfbc087891",
+        "--trace-process-track-uuid=3190711241771602037",
+        "--mojo-platform-channel-handle=14032",
+        "/prefetch:1"
       ],
-      "ppid": 22020,
-      "parent_name": "msedgewebview2.exe"
+      "ppid": 22672,
+      "parent_name": "brave.exe"
     },
     {
       "name": "RuntimeBroker.exe",
@@ -4986,94 +4631,6 @@
       ],
       "ppid": 1256,
       "parent_name": "svchost.exe"
-    },
-    {
-      "name": "Figma.exe",
-      "pid": 27164,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-        "--type=utility",
-        "--utility-sub-type=network.mojom.NetworkService",
-        "--lang=en-GB",
-        "--service-sandbox-type=none",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Roaming\\Figma\\DesktopProfile\\v38",
-        "--standard-schemes=file",
-        "--secure-schemes=desktop-file",
-        "--fetch-schemes=desktop-file,file",
-        "--streaming-schemes=file",
-        "--field-trial-handle=1796,i,17279995187569127127,16522027544932896517,262144",
-        "--enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker",
-        "--disable-features=ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation,WinDelaySpellcheckServiceInit",
-        "--variations-seed-version",
-        "--mojo-platform-channel-handle=2084",
-        "/prefetch:11"
-      ],
-      "ppid": 27496,
-      "parent_name": "Figma.exe"
-    },
-    {
-      "name": "Figma.exe",
-      "pid": 27168,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-        "--type=crashpad-handler",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Roaming\\Figma\\DesktopProfile\\v38",
-        "/prefetch:4",
-        "--monitor-self-annotation=ptype=crashpad-handler",
-        "--database=C:\\Users\\senat\\AppData\\Roaming\\Figma\\DesktopProfile\\v38\\Crashpad",
-        "--url=https://o22594.ingest.sentry.io/api/5265832/minidump/?sentry_key=303d5e72c2104327893b10231fce024a",
-        "--annotation=_productName=Figma",
-        "--annotation=_version=125.10.8",
-        "--annotation=plat=Win64",
-        "--annotation=prod=Electron",
-        "--annotation=sentry[contexts][browser][name]=Electron",
-        "--annotation=sentry[contexts][browser][version]=38.5.0",
-        "--annotation=sentry[environment]=stable",
-        "--annotation=sentry[release]=125.10.8",
-        "--annotation=sentry[tags][initial_figma_id]=1151751242985291826",
-        "--annotation=sentry[user][id]=fdcfe8119a644759910779d2a978d49e",
-        "--annotation=sentry[user][initial_figma_id]=1151751242985291826",
-        "--annotation=ver=38.5.0",
-        "--initial-client-data=0x4e4,0x4dc,0x504,0x50c,0x508,0x7ff727d4a4d4,0x7ff727d4a4e0,0x7ff727d4a4f0"
-      ],
-      "ppid": 27496,
-      "parent_name": "Figma.exe"
-    },
-    {
-      "name": "Figma.exe",
-      "pid": 27496,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe"
-      ],
-      "ppid": 7416,
-      "parent_name": "explorer.exe"
-    },
-    {
-      "name": "Figma.exe",
-      "pid": 27716,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-        "--type=gpu-process",
-        "--force_high_performance_gpu",
-        "--user-data-dir=C:\\Users\\senat\\AppData\\Roaming\\Figma\\DesktopProfile\\v38",
-        "--gpu-preferences=SAAAAAAAAADgAAAYAAAAAAAAAAAAAGAAAQAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA==",
-        "--field-trial-handle=1796,i,17279995187569127127,16522027544932896517,262144",
-        "--enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker",
-        "--disable-features=ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation,WinDelaySpellcheckServiceInit",
-        "--variations-seed-version",
-        "--mojo-platform-channel-handle=1784",
-        "/prefetch:2"
-      ],
-      "ppid": 27496,
-      "parent_name": "Figma.exe"
     },
     {
       "name": "svchost.exe",
@@ -5090,18 +4647,6 @@
       ],
       "ppid": 1112,
       "parent_name": "services.exe"
-    },
-    {
-      "name": "SystemSettings.exe",
-      "pid": 28104,
-      "exe": "C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe",
-        "-ServerName:microsoft.windows.immersivecontrolpanel"
-      ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
     },
     {
       "name": "svchost.exe",
@@ -5133,91 +4678,19 @@
       "parent_name": null
     },
     {
-      "name": "DataExchangeHost.exe",
-      "pid": 28956,
-      "exe": "C:\\Windows\\System32\\DataExchangeHost.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Windows\\System32\\DataExchangeHost.exe",
-        "-Embedding"
-      ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
-    },
-    {
       "name": "svchost.exe",
-      "pid": 30704,
+      "pid": 30396,
       "exe": "C:\\Windows\\System32\\svchost.exe",
-      "username": "NT AUTHORITY\\SYSTEM",
+      "username": "NT AUTHORITY\\LOCAL SERVICE",
       "cmdline": [
         "C:\\WINDOWS\\system32\\svchost.exe",
         "-k",
-        "GPSvcGroup"
+        "LocalService",
+        "-s",
+        "W32Time"
       ],
       "ppid": 1112,
       "parent_name": "services.exe"
-    },
-    {
-      "name": "brave.exe",
-      "pid": 31184,
-      "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-        "--type=renderer",
-        "--enable-distillability-service",
-        "--origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU=",
-        "--no-pre-read-main-dll",
-        "--video-capture-use-gpu-memory-buffer",
-        "--lang=en-GB",
-        "--device-scale-factor=1",
-        "--num-raster-threads=2",
-        "--enable-main-frame-before-activation",
-        "--renderer-client-id=555",
-        "--time-ticks-at-unix-epoch=-1765154086043695",
-        "--launch-time-ticks=138747636557",
-        "--metrics-shmem-handle=5936,i,11694449758234768325,10861619336881554186,2097152",
-        "--field-trial-handle=2372,i,9557323275121780777,12798466449319400985,262144",
-        "--variations-seed-version=main@8ede84b65cb4d9cdc90358f8a10de1dfbc087891",
-        "--trace-process-track-uuid=3190709506370097689",
-        "--mojo-platform-channel-handle=6636",
-        "/prefetch:1"
-      ],
-      "ppid": 22672,
-      "parent_name": "brave.exe"
-    },
-    {
-      "name": "msedge.exe",
-      "pid": 33172,
-      "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-        "--type=renderer",
-        "--extension-process",
-        "--renderer-sub-type=extension",
-        "--pdf-upsell-enabled",
-        "--dma-cps-flags=2048",
-        "--no-pre-read-main-dll",
-        "--video-capture-use-gpu-memory-buffer",
-        "--lang=en-GB",
-        "--js-flags",
-        "--device-scale-factor=1",
-        "--num-raster-threads=2",
-        "--enable-main-frame-before-activation",
-        "--renderer-client-id=17",
-        "--time-ticks-at-unix-epoch=-1765154085014067",
-        "--launch-time-ticks=251981513253",
-        "--ssd-no-pressure-read-main-dll",
-        "--metrics-shmem-handle=4076,i,15257051625408957001,4406572425752019327,2097152",
-        "--field-trial-handle=2452,i,5766457516876976455,9802218841843228224,262144",
-        "--variations-seed-version",
-        "--trace-process-track-uuid=3190709002241582927",
-        "--mojo-platform-channel-handle=1492",
-        "/prefetch:9"
-      ],
-      "ppid": 40136,
-      "parent_name": "msedge.exe"
     },
     {
       "name": "svchost.exe",
@@ -5236,18 +4709,6 @@
       "parent_name": "services.exe"
     },
     {
-      "name": "python.exe",
-      "pid": 34024,
-      "exe": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "python",
-        "sentinel_controller.py"
-      ],
-      "ppid": 50548,
-      "parent_name": "cmd.exe"
-    },
-    {
       "name": "helper.exe",
       "pid": 34068,
       "exe": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\helper\\helper.exe",
@@ -5261,6 +4722,20 @@
       ],
       "ppid": 16188,
       "parent_name": "utweb.exe"
+    },
+    {
+      "name": "msedge.exe",
+      "pid": 34160,
+      "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "--flag-switches-begin",
+        "--flag-switches-end",
+        "--no-startup-window"
+      ],
+      "ppid": 37020,
+      "parent_name": null
     },
     {
       "name": "brave.exe",
@@ -5359,18 +4834,6 @@
     },
     {
       "name": "dllhost.exe",
-      "pid": 37152,
-      "exe": "C:\\Windows\\System32\\dllhost.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\WINDOWS\\system32\\DllHost.exe",
-        "/Processid:{160A73D9-5263-41B8-B9C7-930DB8DA5D5C}"
-      ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
-    },
-    {
-      "name": "dllhost.exe",
       "pid": 37772,
       "exe": "C:\\Windows\\System32\\dllhost.exe",
       "username": "SENATOR\\senat",
@@ -5383,15 +4846,26 @@
     },
     {
       "name": "msedge.exe",
-      "pid": 40136,
+      "pid": 40092,
       "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
         "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-        "--no-startup-window"
+        "--type=utility",
+        "--utility-sub-type=network.mojom.NetworkService",
+        "--lang=en-GB",
+        "--service-sandbox-type=none",
+        "--no-pre-read-main-dll",
+        "--startup-read-main-dll",
+        "--metrics-shmem-handle=2292,i,17755768649985819408,3733416407189540011,524288",
+        "--field-trial-handle=2420,i,11307867549392544629,7575912698976290344,262144",
+        "--variations-seed-version",
+        "--trace-process-track-uuid=3190708989122997041",
+        "--mojo-platform-channel-handle=2612",
+        "/prefetch:11"
       ],
-      "ppid": 43684,
-      "parent_name": null
+      "ppid": 34160,
+      "parent_name": "msedge.exe"
     },
     {
       "name": "FileCoAuth.exe",
@@ -5404,6 +4878,22 @@
       ],
       "ppid": 1256,
       "parent_name": "svchost.exe"
+    },
+    {
+      "name": "svchost.exe",
+      "pid": 40876,
+      "exe": "C:\\Windows\\System32\\svchost.exe",
+      "username": "NT AUTHORITY\\SYSTEM",
+      "cmdline": [
+        "C:\\WINDOWS\\System32\\svchost.exe",
+        "-k",
+        "wsappx",
+        "-p",
+        "-s",
+        "ClipSVC"
+      ],
+      "ppid": 1112,
+      "parent_name": "services.exe"
     },
     {
       "name": "YourPhoneAppProxy.exe",
@@ -5429,6 +4919,18 @@
       ],
       "ppid": 1112,
       "parent_name": "services.exe"
+    },
+    {
+      "name": "python.exe",
+      "pid": 41476,
+      "exe": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "C:\\Users\\senat\\PycharmProjects\\Sentinel\\sentinel_agent.py"
+      ],
+      "ppid": 41732,
+      "parent_name": "pycharm64.exe"
     },
     {
       "name": "pycharm64.exe",
@@ -5484,61 +4986,43 @@
       "parent_name": "brave.exe"
     },
     {
-      "name": "smartscreen.exe",
-      "pid": 46400,
-      "exe": "C:\\Windows\\System32\\smartscreen.exe",
-      "username": "SENATOR\\senat",
+      "name": "svchost.exe",
+      "pid": 44148,
+      "exe": "C:\\Windows\\System32\\svchost.exe",
+      "username": "NT AUTHORITY\\SYSTEM",
       "cmdline": [
-        "C:\\Windows\\System32\\smartscreen.exe",
-        "-Embedding"
+        "C:\\WINDOWS\\System32\\svchost.exe",
+        "-k",
+        "LocalSystemNetworkRestricted",
+        "-p",
+        "-s",
+        "WdiSystemHost"
       ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
+      "ppid": 1112,
+      "parent_name": "services.exe"
     },
     {
-      "name": "dllhost.exe",
-      "pid": 46828,
-      "exe": "C:\\Windows\\System32\\dllhost.exe",
-      "username": "SENATOR\\senat",
+      "name": "SearchProtocolHost.exe",
+      "pid": 44400,
+      "exe": "C:\\Windows\\System32\\SearchProtocolHost.exe",
+      "username": "NT AUTHORITY\\SYSTEM",
       "cmdline": [
-        "C:\\WINDOWS\\system32\\DllHost.exe",
-        "/Processid:{CA6CC9F1-867A-481E-951E-A28C5E4F01EA}"
+        "C:\\WINDOWS\\System32\\SearchProtocolHost.exe",
+        "Global\\UsGthrFltPipeMssGthrPipe119_",
+        "Global\\UsGthrCtrlFltPipeMssGthrPipe119",
+        "1",
+        "-2147483646",
+        "Software\\Microsoft\\Windows Search",
+        "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)",
+        "C:\\ProgramData\\Microsoft\\Search\\Data\\Temp\\usgthrsvc",
+        "DownLevelDaemon"
       ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
-    },
-    {
-      "name": "brave.exe",
-      "pid": 47288,
-      "exe": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-        "--type=renderer",
-        "--enable-distillability-service",
-        "--origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU=",
-        "--no-pre-read-main-dll",
-        "--video-capture-use-gpu-memory-buffer",
-        "--lang=en-GB",
-        "--device-scale-factor=1",
-        "--num-raster-threads=2",
-        "--enable-main-frame-before-activation",
-        "--renderer-client-id=1028",
-        "--time-ticks-at-unix-epoch=-1765154086043695",
-        "--launch-time-ticks=180953964412",
-        "--metrics-shmem-handle=14840,i,15677937355370217721,1086987615449467913,2097152",
-        "--field-trial-handle=2372,i,9557323275121780777,12798466449319400985,262144",
-        "--variations-seed-version=main@8ede84b65cb4d9cdc90358f8a10de1dfbc087891",
-        "--trace-process-track-uuid=3190709949590892266",
-        "--mojo-platform-channel-handle=6628",
-        "/prefetch:1"
-      ],
-      "ppid": 22672,
-      "parent_name": "brave.exe"
+      "ppid": 1484,
+      "parent_name": "SearchIndexer.exe"
     },
     {
       "name": "msedge.exe",
-      "pid": 47520,
+      "pid": 45596,
       "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
@@ -5556,10 +5040,57 @@
         "--annotation=plat=Win64",
         "--annotation=prod=Edge",
         "--annotation=ver=143.0.3650.75",
-        "--initial-client-data=0x268,0x26c,0x270,0x264,0x278,0x7ffd2e3062b8,0x7ffd2e3062c4,0x7ffd2e3062d0"
+        "--initial-client-data=0x274,0x278,0x27c,0x270,0x280,0x7ffd2e3062b8,0x7ffd2e3062c4,0x7ffd2e3062d0"
       ],
-      "ppid": 40136,
+      "ppid": 34160,
       "parent_name": "msedge.exe"
+    },
+    {
+      "name": "dllhost.exe",
+      "pid": 46140,
+      "exe": "C:\\Windows\\System32\\dllhost.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\WINDOWS\\system32\\DllHost.exe",
+        "/Processid:{973D20D7-562D-44B9-B70B-5A0F49CCDF3F}"
+      ],
+      "ppid": 1256,
+      "parent_name": "svchost.exe"
+    },
+    {
+      "name": "MsMpEng.exe",
+      "pid": 46344,
+      "exe": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25110.5-0\\MsMpEng.exe",
+      "username": "NT AUTHORITY\\SYSTEM",
+      "cmdline": [
+        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25110.5-0\\MsMpEng.exe"
+      ],
+      "ppid": 1112,
+      "parent_name": "services.exe"
+    },
+    {
+      "name": "dllhost.exe",
+      "pid": 46828,
+      "exe": "C:\\Windows\\System32\\dllhost.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\WINDOWS\\system32\\DllHost.exe",
+        "/Processid:{CA6CC9F1-867A-481E-951E-A28C5E4F01EA}"
+      ],
+      "ppid": 1256,
+      "parent_name": "svchost.exe"
+    },
+    {
+      "name": "dllhost.exe",
+      "pid": 47956,
+      "exe": "C:\\Windows\\System32\\dllhost.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\WINDOWS\\system32\\DllHost.exe",
+        "/Processid:{B21858C6-9711-4257-99C8-5C0084BEBCE1}"
+      ],
+      "ppid": 1256,
+      "parent_name": "svchost.exe"
     },
     {
       "name": "conhost.exe",
@@ -5617,17 +5148,6 @@
       "parent_name": "brave.exe"
     },
     {
-      "name": "ShellHost.exe",
-      "pid": 49572,
-      "exe": "C:\\Windows\\System32\\ShellHost.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\Windows\\System32\\ShellHost.exe"
-      ],
-      "ppid": 1812,
-      "parent_name": "sihost.exe"
-    },
-    {
       "name": "cmd.exe",
       "pid": 50548,
       "exe": "C:\\Windows\\System32\\cmd.exe",
@@ -5650,75 +5170,29 @@
       "parent_name": null
     },
     {
-      "name": "SearchFilterHost.exe",
-      "pid": 50876,
-      "exe": "C:\\Windows\\System32\\SearchFilterHost.exe",
-      "username": "NT AUTHORITY\\SYSTEM",
-      "cmdline": [
-        "C:\\WINDOWS\\System32\\SearchFilterHost.exe",
-        "900",
-        "3028",
-        "3008",
-        "884",
-        "{5E941D80-BF96-11CD-B579-08002B30BFEB}"
-      ],
-      "ppid": 1484,
-      "parent_name": "SearchIndexer.exe"
-    },
-    {
       "name": "msedge.exe",
-      "pid": 51724,
+      "pid": 50812,
       "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
         "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-        "--type=utility",
-        "--utility-sub-type=storage.mojom.StorageService",
-        "--lang=en-GB",
-        "--service-sandbox-type=service",
+        "--type=gpu-process",
         "--no-pre-read-main-dll",
+        "--gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA==",
         "--startup-read-main-dll",
-        "--metrics-shmem-handle=2812,i,14323028701458917615,6689354519094232245,524288",
-        "--field-trial-handle=2452,i,5766457516876976455,9802218841843228224,262144",
+        "--metrics-shmem-handle=2104,i,6361046405285269100,5852670998653701881,262144",
+        "--field-trial-handle=2420,i,11307867549392544629,7575912698976290344,262144",
         "--variations-seed-version",
-        "--trace-process-track-uuid=3190708990060038890",
-        "--mojo-platform-channel-handle=1524",
-        "/prefetch:13"
+        "--trace-process-track-uuid=3190708988185955192",
+        "--mojo-platform-channel-handle=2412",
+        "/prefetch:2"
       ],
-      "ppid": 40136,
+      "ppid": 34160,
       "parent_name": "msedge.exe"
     },
     {
       "name": "svchost.exe",
-      "pid": 51988,
-      "exe": "C:\\Windows\\System32\\svchost.exe",
-      "username": "NT AUTHORITY\\SYSTEM",
-      "cmdline": [
-        "C:\\WINDOWS\\system32\\svchost.exe",
-        "-k",
-        "netsvcs",
-        "-p",
-        "-s",
-        "wuauserv"
-      ],
-      "ppid": 1112,
-      "parent_name": "services.exe"
-    },
-    {
-      "name": "dllhost.exe",
-      "pid": 52344,
-      "exe": "C:\\Windows\\System32\\dllhost.exe",
-      "username": "SENATOR\\senat",
-      "cmdline": [
-        "C:\\WINDOWS\\system32\\DllHost.exe",
-        "/Processid:{5250E46F-BB09-D602-5891-F476DC89B700}"
-      ],
-      "ppid": 1256,
-      "parent_name": "svchost.exe"
-    },
-    {
-      "name": "svchost.exe",
-      "pid": 52496,
+      "pid": 51212,
       "exe": "C:\\Windows\\System32\\svchost.exe",
       "username": "NT AUTHORITY\\SYSTEM",
       "cmdline": [
@@ -5733,16 +5207,60 @@
       "parent_name": "services.exe"
     },
     {
-      "name": "conhost.exe",
-      "pid": 52936,
-      "exe": "C:\\Windows\\System32\\conhost.exe",
+      "name": "NisSrv.exe",
+      "pid": 51428,
+      "exe": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25110.5-0\\NisSrv.exe",
+      "username": "NT AUTHORITY\\LOCAL SERVICE",
+      "cmdline": [
+        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.25110.5-0\\NisSrv.exe"
+      ],
+      "ppid": 1112,
+      "parent_name": "services.exe"
+    },
+    {
+      "name": "msedge.exe",
+      "pid": 51904,
+      "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
       "username": "SENATOR\\senat",
       "cmdline": [
-        "\\??\\C:\\WINDOWS\\system32\\conhost.exe",
-        "0x4"
+        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "--type=renderer",
+        "--extension-process",
+        "--renderer-sub-type=extension",
+        "--pdf-upsell-enabled",
+        "--dma-cps-flags=2048",
+        "--no-pre-read-main-dll",
+        "--video-capture-use-gpu-memory-buffer",
+        "--lang=en-GB",
+        "--js-flags",
+        "--device-scale-factor=1",
+        "--num-raster-threads=2",
+        "--enable-main-frame-before-activation",
+        "--renderer-client-id=21",
+        "--time-ticks-at-unix-epoch=-1765154085014070",
+        "--launch-time-ticks=299173975551",
+        "--ssd-no-pressure-read-main-dll",
+        "--metrics-shmem-handle=6016,i,17645618890163228704,5818510138484165624,2097152",
+        "--field-trial-handle=2420,i,11307867549392544629,7575912698976290344,262144",
+        "--variations-seed-version",
+        "--trace-process-track-uuid=3190709005989750323",
+        "--mojo-platform-channel-handle=1728",
+        "/prefetch:9"
       ],
-      "ppid": 11072,
-      "parent_name": "python.exe"
+      "ppid": 34160,
+      "parent_name": "msedge.exe"
+    },
+    {
+      "name": "dllhost.exe",
+      "pid": 52344,
+      "exe": "C:\\Windows\\System32\\dllhost.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "C:\\WINDOWS\\system32\\DllHost.exe",
+        "/Processid:{5250E46F-BB09-D602-5891-F476DC89B700}"
+      ],
+      "ppid": 1256,
+      "parent_name": "svchost.exe"
     },
     {
       "name": "conhost.exe",
@@ -5755,13 +5273,481 @@
       ],
       "ppid": 50548,
       "parent_name": "cmd.exe"
+    },
+    {
+      "name": "python.exe",
+      "pid": 53764,
+      "exe": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "username": "SENATOR\\senat",
+      "cmdline": [
+        "python",
+        "sentinel_controller.py"
+      ],
+      "ppid": 50548,
+      "parent_name": "cmd.exe"
     }
   ],
   "network": {
     "connections": [
       {
         "proto": "udp",
-        "local_ip": "::1",
+        "local_ip": "127.0.0.1",
+        "local_port": 50533,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 5092,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::d406:cb99:a9e9:1e4",
+        "local_port": 6881,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 58699,
+        "remote_ip": "20.189.173.17",
+        "remote_port": 443,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.0.24",
+        "local_port": 137,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 63574,
+        "remote_ip": "127.0.0.1",
+        "remote_port": 9000,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "python.exe",
+          "pid": 41476,
+          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 63563,
+        "remote_ip": "31.186.254.235",
+        "remote_port": 443,
+        "status": "CLOSE_WAIT",
+        "process": {
+          "name": "brave.exe",
+          "pid": 23112,
+          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "::",
+        "local_port": 5355,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 2960,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
+        "local_port": 6881,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "127.0.0.1",
+        "local_port": 50202,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "iCloudDrive.exe",
+          "pid": 20392,
+          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudDrive.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 65394,
+        "remote_ip": "142.251.30.94",
+        "remote_port": 80,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.56.1",
+        "local_port": 6771,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
+        "local_port": 6881,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.161.1",
+        "local_port": 52685,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "::",
+        "local_port": 58066,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 2960,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 6771,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 62762,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.56.1",
+        "local_port": 52683,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 60939,
+        "remote_ip": "104.18.39.21",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "brave.exe",
+          "pid": 23112,
+          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 5353,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "brave.exe",
+          "pid": 23112,
+          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 63565,
+        "remote_ip": "18.245.253.37",
+        "remote_port": 443,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 63569,
+        "remote_ip": "18.172.153.61",
+        "remote_port": 443,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "127.0.0.1",
+        "local_port": 1900,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 5355,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 2960,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 60182,
+        "remote_ip": "52.123.242.36",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "ms-teams.exe",
+          "pid": 16968,
+          "path": "C:\\Program Files\\WindowsApps\\MSTeams_25306.804.4102.7193_x64__8wekyb3d8bbwe\\ms-teams.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 59335,
+        "remote_ip": "127.0.0.1",
+        "remote_port": 59340,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 49795,
+        "remote_ip": "40.99.214.146",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "explorer.exe",
+          "pid": 7416,
+          "path": "C:\\Windows\\explorer.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 50599,
+        "remote_ip": "140.82.113.26",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "brave.exe",
+          "pid": 23112,
+          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "::",
+        "local_port": 5353,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 2960,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 58066,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 2960,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "127.0.0.1",
+        "local_port": 62750,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::d406:cb99:a9e9:1e4",
+        "local_port": 1900,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "127.0.0.1",
+        "local_port": 52687,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 59340,
+        "remote_ip": "127.0.0.1",
+        "remote_port": 59335,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "helper.exe",
+          "pid": 34068,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\helper\\helper.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 62760,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::d406:cb99:a9e9:1e4",
         "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
@@ -5790,179 +5776,21 @@
       {
         "proto": "tcp",
         "local_ip": "192.168.0.24",
-        "local_port": 53149,
-        "remote_ip": "18.245.162.31",
-        "remote_port": 443,
+        "local_port": 63279,
+        "remote_ip": "17.57.146.8",
+        "remote_port": 5223,
         "status": "ESTABLISHED",
         "process": {
-          "name": "Figma.exe",
-          "pid": 27496,
-          "path": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
+          "name": "APSDaemon.exe",
+          "pid": 19116,
+          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\APSDaemon.exe",
           "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 58556,
-        "remote_ip": "127.0.0.1",
-        "remote_port": 9000,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "python.exe",
-          "pid": 11072,
-          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 52455,
-        "remote_ip": "52.98.145.114",
-        "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 51394,
-        "remote_ip": "72.144.120.145",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "ms-teams.exe",
-          "pid": 16968,
-          "path": "C:\\Program Files\\WindowsApps\\MSTeams_25306.804.4102.7193_x64__8wekyb3d8bbwe\\ms-teams.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.0.24",
-        "local_port": 52686,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
         }
       },
       {
         "proto": "udp",
         "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
-        "local_port": 1900,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 58558,
-        "remote_ip": "20.42.73.25",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "PAD.Console.Host.exe",
-          "pid": 16676,
-          "path": "C:\\Program Files\\WindowsApps\\Microsoft.PowerAutomateDesktop_11.2511.178.0_x64__8wekyb3d8bbwe\\dotnet\\PAD.Console.Host.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 60521,
-        "remote_ip": "172.64.148.235",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "ChatGPT.exe",
-          "pid": 12932,
-          "path": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 56400,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 52461,
-        "remote_ip": "20.50.201.206",
-        "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.255.1",
-        "local_port": 1900,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 1900,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.161.1",
-        "local_port": 137,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::6aa8:d069:cda4:755e",
-        "local_port": 62758,
+        "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -5989,7 +5817,7 @@
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.56.1",
+        "local_ip": "192.168.161.1",
         "local_port": 138,
         "remote_ip": null,
         "remote_port": null,
@@ -6003,64 +5831,36 @@
       },
       {
         "proto": "udp",
-        "local_ip": "::",
-        "local_port": 5353,
+        "local_ip": "::1",
+        "local_port": 62759,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
         "process": {
-          "name": "ChatGPT.exe",
-          "pid": 12932,
-          "path": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
           "user": "SENATOR\\senat"
         }
       },
       {
         "proto": "tcp",
         "local_ip": "192.168.0.24",
-        "local_port": 60514,
-        "remote_ip": "142.251.29.83",
+        "local_port": 49794,
+        "remote_ip": "52.97.219.194",
         "remote_port": 443,
         "status": "ESTABLISHED",
         "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "name": "explorer.exe",
+          "pid": 7416,
+          "path": "C:\\Windows\\explorer.exe",
           "user": "SENATOR\\senat"
         }
       },
       {
         "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 51988,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 9000,
-        "remote_ip": "127.0.0.1",
-        "remote_port": 58556,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "python.exe",
-          "pid": 34024,
-          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 52687,
+        "local_ip": "::1",
+        "local_port": 1900,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -6073,22 +5873,8 @@
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.0.24",
-        "local_port": 137,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::a6fa:7b48:25ed:5f07",
-        "local_port": 6771,
+        "local_ip": "fe80::d406:cb99:a9e9:1e4",
+        "local_port": 62757,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -6100,64 +5886,22 @@
         }
       },
       {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 51235,
-        "remote_ip": "140.82.112.26",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
         "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 59681,
+        "local_ip": "192.168.0.24",
+        "local_port": 1900,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
         "process": {
           "name": "svchost.exe",
-          "pid": 2960,
+          "pid": 1720,
           "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
         }
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.56.1",
-        "local_port": 6771,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 59477,
-        "remote_ip": "108.142.58.148",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "msedgewebview2.exe",
-          "pid": 6456,
-          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
+        "local_ip": "192.168.161.1",
         "local_port": 1900,
         "remote_ip": null,
         "remote_port": null,
@@ -6185,8 +5929,8 @@
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.161.1",
-        "local_port": 62749,
+        "local_ip": "127.0.0.1",
+        "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -6199,11 +5943,39 @@
       },
       {
         "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 53998,
-        "remote_ip": "127.0.0.1",
-        "remote_port": 65337,
+        "local_ip": "192.168.0.24",
+        "local_port": 65392,
+        "remote_ip": "104.18.32.47",
+        "remote_port": 443,
         "status": "ESTABLISHED",
+        "process": {
+          "name": "brave.exe",
+          "pid": 23112,
+          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
+        "local_port": 52681,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 61764,
+        "remote_ip": "18.244.124.66",
+        "remote_port": 443,
+        "status": "CLOSE_WAIT",
         "process": {
           "name": "pycharm64.exe",
           "pid": 41732,
@@ -6212,209 +5984,18 @@
         }
       },
       {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 6771,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 50533,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 5092,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.56.1",
-        "local_port": 1900,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
         "proto": "tcp",
         "local_ip": "192.168.0.24",
-        "local_port": 52457,
-        "remote_ip": "20.190.169.27",
+        "local_port": 63568,
+        "remote_ip": "18.172.153.61",
         "remote_port": 443,
         "status": "TIME_WAIT",
         "process": null
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 5353,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "ChatGPT.exe",
-          "pid": 12932,
-          "path": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::a6fa:7b48:25ed:5f07",
-        "local_port": 62751,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 58555,
-        "remote_ip": "18.244.124.95",
-        "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
       },
       {
         "proto": "udp",
         "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
         "local_port": 62752,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 58557,
-        "remote_ip": "20.50.201.206",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "OneDrive.exe",
-          "pid": 28904,
-          "path": "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 59335,
-        "remote_ip": "127.0.0.1",
-        "remote_port": 59340,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 62762,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 58077,
-        "remote_ip": "127.0.0.1",
-        "remote_port": 58076,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
-        "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -6441,7 +6022,49 @@
       },
       {
         "proto": "udp",
-        "local_ip": "fe80::d406:cb99:a9e9:1e4",
+        "local_ip": "127.0.0.1",
+        "local_port": 50693,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "iCloudCKKS.exe",
+          "pid": 18604,
+          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudCKKS.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 9000,
+        "remote_ip": "127.0.0.1",
+        "remote_port": 63574,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "python.exe",
+          "pid": 53764,
+          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 123,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 30396,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
         "local_port": 1900,
         "remote_ip": null,
         "remote_port": null,
@@ -6454,256 +6077,74 @@
         }
       },
       {
+        "proto": "udp",
+        "local_ip": "192.168.0.24",
+        "local_port": 138,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
         "proto": "tcp",
         "local_ip": "192.168.0.24",
-        "local_port": 53764,
-        "remote_ip": "20.86.94.137",
+        "local_port": 63576,
+        "remote_ip": "13.69.239.74",
         "remote_port": 443,
         "status": "ESTABLISHED",
         "process": {
-          "name": "CrossDeviceService.exe",
-          "pid": 10288,
-          "path": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.CrossDevice_1.25111.44.0_x64__cw5n1h2txyewy\\CrossDeviceService.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 5355,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 2960,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.255.1",
-        "local_port": 62748,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::d406:cb99:a9e9:1e4",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "name": "OneDrive.exe",
+          "pid": 28904,
+          "path": "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe",
           "user": "SENATOR\\senat"
         }
       },
       {
         "proto": "tcp",
         "local_ip": "192.168.0.24",
-        "local_port": 58553,
-        "remote_ip": "18.244.124.95",
-        "remote_port": 443,
+        "local_port": 65396,
+        "remote_ip": "17.253.29.201",
+        "remote_port": 80,
         "status": "TIME_WAIT",
         "process": null
       },
       {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 51114,
-        "remote_ip": "40.99.214.146",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "explorer.exe",
-          "pid": 7416,
-          "path": "C:\\Windows\\explorer.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::87f:3739:a93d:c295",
-        "local_port": 6771,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::d406:cb99:a9e9:1e4",
-        "local_port": 6771,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 55985,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "APSDaemon.exe",
-          "pid": 19116,
-          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\APSDaemon.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
-        "local_port": 62753,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
         "proto": "udp",
         "local_ip": "::",
-        "local_port": 5353,
+        "local_port": 62763,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
         "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
           "user": "SENATOR\\senat"
         }
       },
       {
         "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 50435,
-        "remote_ip": "57.144.241.32",
-        "remote_port": 443,
+        "local_ip": "127.0.0.1",
+        "local_port": 58077,
+        "remote_ip": "127.0.0.1",
+        "remote_port": 58076,
         "status": "ESTABLISHED",
         "process": {
-          "name": "msedgewebview2.exe",
-          "pid": 11268,
-          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 60515,
-        "remote_ip": "20.189.173.7",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "MicrosoftStartFeedProvider.exe",
-          "pid": 13472,
-          "path": "C:\\Program Files\\WindowsApps\\Microsoft.StartExperiencesApp_1.195.0.0_x64__8wekyb3d8bbwe\\MicrosoftStartFeedProvider\\MicrosoftStartFeedProvider.exe",
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
           "user": "SENATOR\\senat"
         }
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.161.1",
-        "local_port": 1900,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 65362,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "iCloudHome.exe",
-          "pid": 12600,
-          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudHome.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "::",
-        "local_port": 59681,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 2960,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 55986,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "APSDaemon.exe",
-          "pid": 19116,
-          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\APSDaemon.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 62760,
+        "local_ip": "fe80::a6fa:7b48:25ed:5f07",
+        "local_port": 62751,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -6730,22 +6171,8 @@
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.56.1",
-        "local_port": 52683,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
         "local_ip": "192.168.161.1",
-        "local_port": 6771,
+        "local_port": 62749,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -6758,78 +6185,8 @@
       },
       {
         "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 50203,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "iCloudDrive.exe",
-          "pid": 20392,
-          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudDrive.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 61562,
-        "remote_ip": "17.57.146.10",
-        "remote_port": 5223,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "APSDaemon.exe",
-          "pid": 19116,
-          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\APSDaemon.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::d406:cb99:a9e9:1e4",
-        "local_port": 62757,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.0.24",
-        "local_port": 138,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 50801,
-        "remote_ip": "172.187.86.74",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 5476,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "::1",
-        "local_port": 1900,
+        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
+        "local_port": 53901,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -6838,20 +6195,6 @@
           "pid": 1720,
           "path": "C:\\Windows\\System32\\svchost.exe",
           "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "::",
-        "local_port": 5355,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 2960,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
         }
       },
       {
@@ -6869,186 +6212,23 @@
         }
       },
       {
-        "proto": "udp",
-        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
-        "local_port": 52681,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "::",
-        "local_port": 50078,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "ms-teams.exe",
-          "pid": 16968,
-          "path": "C:\\Program Files\\WindowsApps\\MSTeams_25306.804.4102.7193_x64__8wekyb3d8bbwe\\ms-teams.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "::1",
-        "local_port": 52682,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 5353,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 50694,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "iCloudCKKS.exe",
-          "pid": 18604,
-          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudCKKS.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
         "proto": "tcp",
         "local_ip": "192.168.0.24",
-        "local_port": 58554,
-        "remote_ip": "18.244.124.95",
+        "local_port": 63200,
+        "remote_ip": "2.22.246.9",
         "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 55308,
-        "remote_ip": "137.184.135.31",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
+        "status": "CLOSE_WAIT",
         "process": {
-          "name": "Blip.exe",
-          "pid": 17572,
-          "path": "C:\\Program Files\\WindowsApps\\BlipStudioInc.BlipApp_1.1.9.0_x64__eydxbjyejh39j\\bin\\Blip.exe",
+          "name": "backgroundTaskHost.exe",
+          "pid": 25940,
+          "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
           "user": "SENATOR\\senat"
         }
       },
       {
         "proto": "udp",
         "local_ip": "192.168.255.1",
-        "local_port": 6771,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.161.1",
-        "local_port": 138,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 59340,
-        "remote_ip": "127.0.0.1",
-        "remote_port": 59335,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "helper.exe",
-          "pid": 34068,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\helper\\helper.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.255.1",
-        "local_port": 137,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 61089,
-        "remote_ip": "18.245.162.124",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "Figma.exe",
-          "pid": 27164,
-          "path": "C:\\Users\\senat\\AppData\\Local\\Figma\\app-125.10.8\\Figma.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::6aa8:d069:cda4:755e",
-        "local_port": 6771,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::5963:898b:1b55:37f1",
-        "local_port": 62755,
+        "local_port": 62748,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7075,68 +6255,8 @@
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.56.1",
-        "local_port": 137,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 53567,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 57780,
-        "remote_ip": "17.250.81.26",
-        "remote_port": 443,
-        "status": "CLOSE_WAIT",
-        "process": {
-          "name": "iCloudDrive.exe",
-          "pid": 20392,
-          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudDrive.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 60518,
-        "remote_ip": "3.166.49.111",
-        "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 52456,
-        "remote_ip": "52.98.145.114",
-        "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
-        "proto": "udp",
         "local_ip": "127.0.0.1",
-        "local_port": 50693,
+        "local_port": 50694,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7150,7 +6270,21 @@
       {
         "proto": "udp",
         "local_ip": "fe80::5963:898b:1b55:37f1",
-        "local_port": 6771,
+        "local_port": 62755,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
+        "local_port": 62756,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7164,8 +6298,31 @@
       {
         "proto": "tcp",
         "local_ip": "192.168.0.24",
-        "local_port": 58039,
-        "remote_ip": "172.64.148.235",
+        "local_port": 65395,
+        "remote_ip": "184.25.193.61",
+        "remote_port": 80,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
+        "local_port": 1900,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 51903,
+        "remote_ip": "104.18.39.21",
         "remote_port": 443,
         "status": "ESTABLISHED",
         "process": {
@@ -7176,9 +6333,32 @@
         }
       },
       {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 63571,
+        "remote_ip": "18.244.124.114",
+        "remote_port": 443,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 61703,
+        "remote_ip": "108.142.58.148",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "msedgewebview2.exe",
+          "pid": 6456,
+          "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\142.0.3595.94\\msedgewebview2.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
         "proto": "udp",
-        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
-        "local_port": 6771,
+        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
+        "local_port": 62753,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7205,8 +6385,106 @@
       },
       {
         "proto": "udp",
+        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
+        "local_port": 1900,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "127.0.0.1",
+        "local_port": 55986,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "APSDaemon.exe",
+          "pid": 19116,
+          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\APSDaemon.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 5353,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 2960,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 55610,
+        "remote_ip": "52.146.136.33",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "CrossDeviceService.exe",
+          "pid": 10288,
+          "path": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.CrossDevice_1.25111.44.0_x64__cw5n1h2txyewy\\CrossDeviceService.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.56.1",
+        "local_port": 137,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.255.1",
+        "local_port": 6771,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::6aa8:d069:cda4:755e",
+        "local_port": 62758,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
         "local_ip": "::1",
-        "local_port": 62759,
+        "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7220,7 +6498,142 @@
       {
         "proto": "udp",
         "local_ip": "::",
-        "local_port": 62763,
+        "local_port": 62761,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 63567,
+        "remote_ip": "18.164.68.99",
+        "remote_port": 443,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.161.1",
+        "local_port": 137,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "::1",
+        "local_port": 52682,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
+        "local_port": 6771,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 49325,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "brave.exe",
+          "pid": 23112,
+          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 62199,
+        "remote_ip": "72.144.120.145",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "ms-teams.exe",
+          "pid": 16968,
+          "path": "C:\\Program Files\\WindowsApps\\MSTeams_25306.804.4102.7193_x64__8wekyb3d8bbwe\\ms-teams.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.56.1",
+        "local_port": 1900,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 64952,
+        "remote_ip": "127.0.0.1",
+        "remote_port": 65337,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "pycharm64.exe",
+          "pid": 41732,
+          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\PyCharm\\bin\\pycharm64.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
+        "local_port": 6881,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
+        "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7248,35 +6661,35 @@
       {
         "proto": "udp",
         "local_ip": "::",
-        "local_port": 62761,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "::",
-        "local_port": 5353,
+        "local_port": 123,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
         "process": {
           "name": "svchost.exe",
-          "pid": 2960,
+          "pid": 30396,
           "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
         }
       },
       {
         "proto": "udp",
-        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
-        "local_port": 62756,
+        "local_ip": "0.0.0.0",
+        "local_port": 5050,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 8360,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.161.1",
+        "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7288,18 +6701,9 @@
         }
       },
       {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 52459,
-        "remote_ip": "104.208.16.91",
-        "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
         "proto": "udp",
-        "local_ip": "127.0.0.1",
-        "local_port": 62750,
+        "local_ip": "fe80::a6fa:7b48:25ed:5f07",
+        "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7315,7 +6719,7 @@
         "local_ip": "127.0.0.1",
         "local_port": 65337,
         "remote_ip": "127.0.0.1",
-        "remote_port": 53998,
+        "remote_port": 64952,
         "status": "ESTABLISHED",
         "process": {
           "name": "embeddings-server.exe",
@@ -7326,8 +6730,31 @@
       },
       {
         "proto": "udp",
-        "local_ip": "192.168.161.1",
-        "local_port": 52685,
+        "local_ip": "::",
+        "local_port": 5353,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "brave.exe",
+          "pid": 23112,
+          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 65397,
+        "remote_ip": "62.252.115.10",
+        "remote_port": 80,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.255.1",
+        "local_port": 1900,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7341,7 +6768,35 @@
       {
         "proto": "udp",
         "local_ip": "127.0.0.1",
-        "local_port": 50202,
+        "local_port": 65362,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "iCloudHome.exe",
+          "pid": 12600,
+          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudHome.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 49804,
+        "remote_ip": "17.250.81.67",
+        "remote_port": 443,
+        "status": "CLOSE_WAIT",
+        "process": {
+          "name": "iCloudDrive.exe",
+          "pid": 20392,
+          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\iCloudDrive.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "127.0.0.1",
+        "local_port": 50203,
         "remote_ip": null,
         "remote_port": null,
         "status": "NONE",
@@ -7367,101 +6822,8 @@
         }
       },
       {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 60517,
-        "remote_ip": "18.245.253.57",
-        "remote_port": 443,
-        "status": "TIME_WAIT",
-        "process": null
-      },
-      {
         "proto": "udp",
-        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
-        "local_port": 1900,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "192.168.0.24",
-        "local_port": 1900,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 5050,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 8360,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 59224,
-        "remote_ip": "52.123.242.97",
-        "remote_port": 443,
-        "status": "ESTABLISHED",
-        "process": {
-          "name": "ms-teams.exe",
-          "pid": 16968,
-          "path": "C:\\Program Files\\WindowsApps\\MSTeams_25306.804.4102.7193_x64__8wekyb3d8bbwe\\ms-teams.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 55879,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "brave.exe",
-          "pid": 23112,
-          "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
-        "local_port": 53901,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "NONE",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1720,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "udp",
-        "local_ip": "127.0.0.1",
+        "local_ip": "fe80::87f:3739:a93d:c295",
         "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
@@ -7471,6 +6833,136 @@
           "pid": 16188,
           "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
           "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.0.24",
+        "local_port": 52686,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1720,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.255.1",
+        "local_port": 137,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "192.168.56.1",
+        "local_port": 138,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "fe80::6aa8:d069:cda4:755e",
+        "local_port": 6771,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "udp",
+        "local_ip": "127.0.0.1",
+        "local_port": 55985,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "APSDaemon.exe",
+          "pid": 19116,
+          "path": "C:\\Program Files\\WindowsApps\\AppleInc.iCloud_15.5.23.0_x64__nzyj5cx40ttqa\\iCloud\\APSDaemon.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 63566,
+        "remote_ip": "3.166.49.114",
+        "remote_port": 443,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "0.0.0.0",
+        "local_port": 6881,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 63570,
+        "remote_ip": "18.172.153.61",
+        "remote_port": 443,
+        "status": "TIME_WAIT",
+        "process": null
+      },
+      {
+        "proto": "udp",
+        "local_ip": "::",
+        "local_port": 50078,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "NONE",
+        "process": {
+          "name": "ms-teams.exe",
+          "pid": 16968,
+          "path": "C:\\Program Files\\WindowsApps\\MSTeams_25306.804.4102.7193_x64__8wekyb3d8bbwe\\ms-teams.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 58012,
+        "remote_ip": "172.187.86.72",
+        "remote_port": 443,
+        "status": "ESTABLISHED",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 5476,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
         }
       },
       {
@@ -7489,7 +6981,7 @@
       },
       {
         "proto": "udp",
-        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
+        "local_ip": "fe80::5963:898b:1b55:37f1",
         "local_port": 6771,
         "remote_ip": null,
         "remote_port": null,
@@ -7500,37 +6992,261 @@
           "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
           "user": "SENATOR\\senat"
         }
-      },
+      }
+    ],
+    "listening_ports": [
       {
         "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 56118,
-        "remote_ip": "2.22.246.9",
-        "remote_port": 443,
-        "status": "CLOSE_WAIT",
+        "local_ip": "0.0.0.0",
+        "local_port": 19577,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
         "process": {
-          "name": "backgroundTaskHost.exe",
-          "pid": 25940,
-          "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
           "user": "SENATOR\\senat"
         }
       },
       {
-        "proto": "udp",
-        "local_ip": "0.0.0.0",
-        "local_port": 5353,
+        "proto": "tcp",
+        "local_ip": "::1",
+        "local_port": 13337,
         "remote_ip": null,
         "remote_port": null,
-        "status": "NONE",
+        "status": "LISTEN",
+        "process": {
+          "name": "RzSDKServer.exe",
+          "pid": 5208,
+          "path": "C:\\Program Files (x86)\\Razer Chroma SDK\\bin\\RzSDKServer.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 52829,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "jetbrains-toolbox.exe",
+          "pid": 10736,
+          "path": "C:\\Users\\senat\\AppData\\Local\\JetBrains\\Toolbox\\bin\\jetbrains-toolbox.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 19576,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 49670,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "GameManagerService3.exe",
+          "pid": 5172,
+          "path": "C:\\Program Files (x86)\\Razer\\Razer Services\\GMS3\\GameManagerService3.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::1",
+        "local_port": 49669,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "jhi_service.exe",
+          "pid": 5132,
+          "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\dal.inf_amd64_af50fdb80983f7bc\\jhi_service.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
+        "local_port": 6881,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 22,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "sshd.exe",
+          "pid": 5216,
+          "path": "C:\\Windows\\System32\\OpenSSH\\sshd.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 7680,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
         "process": {
           "name": "svchost.exe",
-          "pid": 2960,
+          "pid": 9628,
           "path": "C:\\Windows\\System32\\svchost.exe",
           "user": "NT AUTHORITY\\NETWORK SERVICE"
         }
-      }
-    ],
-    "listening_ports": [
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 54235,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 49664,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "lsass.exe",
+          "pid": 1120,
+          "path": "C:\\Windows\\System32\\lsass.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 63342,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "pycharm64.exe",
+          "pid": 41732,
+          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\PyCharm\\bin\\pycharm64.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 44950,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "figma_agent.exe",
+          "pid": 10372,
+          "path": "C:\\Users\\senat\\AppData\\Local\\FigmaAgent\\figma_agent.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 49668,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "spoolsv.exe",
+          "pid": 4332,
+          "path": "C:\\Windows\\System32\\spoolsv.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 7680,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 9628,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.0.24",
+        "local_port": 139,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 65444,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "RzDiagnostic",
+          "pid": 6280,
+          "path": "C:\\Program Files (x86)\\Razer Chroma SDK\\bin\\RzDiagnostic",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::1",
+        "local_port": 42050,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "OneDrive.Sync.Service.exe",
+          "pid": 50756,
+          "path": "C:\\Program Files\\Microsoft OneDrive\\25.224.1116.0003\\OneDrive.Sync.Service.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
       {
         "proto": "tcp",
         "local_ip": "0.0.0.0",
@@ -7542,6 +7258,286 @@
           "name": "services.exe",
           "pid": 1112,
           "path": "C:\\Windows\\System32\\services.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 49666,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 3076,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
+        "local_port": 6881,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 9000,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "python.exe",
+          "pid": 53764,
+          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.56.1",
+        "local_port": 139,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 5040,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 8360,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 49665,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "wininit.exe",
+          "pid": 584,
+          "path": "C:\\Windows\\System32\\wininit.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 65337,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "embeddings-server.exe",
+          "pid": 35952,
+          "path": "C:\\Users\\senat\\AppData\\Local\\JetBrains\\PyCharm2025.2\\semantic-search\\server\\3.0.169\\embeddings-server.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 49671,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "services.exe",
+          "pid": 1112,
+          "path": "C:\\Windows\\System32\\services.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 59336,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "helper.exe",
+          "pid": 34068,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\helper\\helper.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 445,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 912,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "vmware-authd.exe",
+          "pid": 5292,
+          "path": "C:\\Program Files (x86)\\VMware\\VMware Player\\vmware-authd.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 902,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "vmware-authd.exe",
+          "pid": 5292,
+          "path": "C:\\Program Files (x86)\\VMware\\VMware Player\\vmware-authd.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.255.1",
+        "local_port": 139,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 49668,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "spoolsv.exe",
+          "pid": 4332,
+          "path": "C:\\Windows\\System32\\spoolsv.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 49667,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 3460,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 135,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 1416,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "192.168.161.1",
+        "local_port": 139,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 19575,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "utweb.exe",
+          "pid": 16188,
+          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 49666,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 3076,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\LOCAL SERVICE"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 13344,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "RzChromaStreamServer.exe",
+          "pid": 6944,
+          "path": "C:\\Program Files (x86)\\Razer Chroma SDK\\bin\\RzChromaStreamServer.exe",
           "user": "NT AUTHORITY\\SYSTEM"
         }
       },
@@ -7561,16 +7557,16 @@
       },
       {
         "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 44950,
+        "local_ip": "0.0.0.0",
+        "local_port": 135,
         "remote_ip": null,
         "remote_port": null,
         "status": "LISTEN",
         "process": {
-          "name": "figma_agent.exe",
-          "pid": 10372,
-          "path": "C:\\Users\\senat\\AppData\\Local\\FigmaAgent\\figma_agent.exe",
-          "user": "SENATOR\\senat"
+          "name": "svchost.exe",
+          "pid": 1416,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\NETWORK SERVICE"
         }
       },
       {
@@ -7584,6 +7580,20 @@
           "name": "utweb.exe",
           "pid": 16188,
           "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
+          "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "127.0.0.1",
+        "local_port": 44960,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "figma_agent.exe",
+          "pid": 10372,
+          "path": "C:\\Users\\senat\\AppData\\Local\\FigmaAgent\\figma_agent.exe",
           "user": "SENATOR\\senat"
         }
       },
@@ -7617,8 +7627,8 @@
       },
       {
         "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 19577,
+        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
+        "local_port": 6881,
         "remote_ip": null,
         "remote_port": null,
         "status": "LISTEN",
@@ -7627,6 +7637,34 @@
           "pid": 16188,
           "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
           "user": "SENATOR\\senat"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 54235,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "System",
+          "pid": 4,
+          "path": null,
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "0.0.0.0",
+        "local_port": 49667,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "svchost.exe",
+          "pid": 3460,
+          "path": "C:\\Windows\\System32\\svchost.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
         }
       },
       {
@@ -7645,20 +7683,6 @@
       },
       {
         "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 49667,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 3460,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
         "local_ip": "0.0.0.0",
         "local_port": 49664,
         "remote_ip": null,
@@ -7668,6 +7692,20 @@
           "name": "lsass.exe",
           "pid": 1120,
           "path": "C:\\Windows\\System32\\lsass.exe",
+          "user": "NT AUTHORITY\\SYSTEM"
+        }
+      },
+      {
+        "proto": "tcp",
+        "local_ip": "::",
+        "local_port": 49665,
+        "remote_ip": null,
+        "remote_port": null,
+        "status": "LISTEN",
+        "process": {
+          "name": "wininit.exe",
+          "pid": 584,
+          "path": "C:\\Windows\\System32\\wininit.exe",
           "user": "NT AUTHORITY\\SYSTEM"
         }
       },
@@ -7687,104 +7725,6 @@
       },
       {
         "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 13344,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "RzChromaStreamServer.exe",
-          "pid": 6944,
-          "path": "C:\\Program Files (x86)\\Razer Chroma SDK\\bin\\RzChromaStreamServer.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 902,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "vmware-authd.exe",
-          "pid": 5292,
-          "path": "C:\\Program Files (x86)\\VMware\\VMware Player\\vmware-authd.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 52829,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "jetbrains-toolbox.exe",
-          "pid": 10736,
-          "path": "C:\\Users\\senat\\AppData\\Local\\JetBrains\\Toolbox\\bin\\jetbrains-toolbox.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 54235,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 65444,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "RzDiagnostic",
-          "pid": 6280,
-          "path": "C:\\Program Files (x86)\\Razer Chroma SDK\\bin\\RzDiagnostic",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::1",
-        "local_port": 49669,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "jhi_service.exe",
-          "pid": 5132,
-          "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\dal.inf_amd64_af50fdb80983f7bc\\jhi_service.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::1",
-        "local_port": 42050,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "OneDrive.Sync.Service.exe",
-          "pid": 50756,
-          "path": "C:\\Program Files\\Microsoft OneDrive\\25.224.1116.0003\\OneDrive.Sync.Service.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
         "local_ip": "0.0.0.0",
         "local_port": 22,
         "remote_ip": null,
@@ -7795,496 +7735,6 @@
           "pid": 5216,
           "path": "C:\\Windows\\System32\\OpenSSH\\sshd.exe",
           "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 65337,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "embeddings-server.exe",
-          "pid": 35952,
-          "path": "C:\\Users\\senat\\AppData\\Local\\JetBrains\\PyCharm2025.2\\semantic-search\\server\\3.0.169\\embeddings-server.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 49670,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "GameManagerService3.exe",
-          "pid": 5172,
-          "path": "C:\\Program Files (x86)\\Razer\\Razer Services\\GMS3\\GameManagerService3.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "fe80::a205:c4b4:4cd7:fd4d",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.0.24",
-        "local_port": 139,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 49665,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "wininit.exe",
-          "pid": 584,
-          "path": "C:\\Windows\\System32\\wininit.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 44960,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "figma_agent.exe",
-          "pid": 10372,
-          "path": "C:\\Users\\senat\\AppData\\Local\\FigmaAgent\\figma_agent.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 63342,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "pycharm64.exe",
-          "pid": 41732,
-          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\PyCharm\\bin\\pycharm64.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 59336,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "helper.exe",
-          "pid": 34068,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\helper\\helper.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::1",
-        "local_port": 13337,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "RzSDKServer.exe",
-          "pid": 5208,
-          "path": "C:\\Program Files (x86)\\Razer Chroma SDK\\bin\\RzSDKServer.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 19575,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 135,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1416,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 445,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 9000,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "python.exe",
-          "pid": 34024,
-          "path": "C:\\Users\\senat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 135,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 1416,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 54235,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "127.0.0.1",
-        "local_port": 63386,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "ChatGPT.exe",
-          "pid": 17344,
-          "path": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2025.328.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 49664,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "lsass.exe",
-          "pid": 1120,
-          "path": "C:\\Windows\\System32\\lsass.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 7680,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 9628,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 22,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "sshd.exe",
-          "pid": 5216,
-          "path": "C:\\Windows\\System32\\OpenSSH\\sshd.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.255.1",
-        "local_port": 139,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 49666,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 3076,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.56.1",
-        "local_port": 139,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 49668,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "spoolsv.exe",
-          "pid": 4332,
-          "path": "C:\\Windows\\System32\\spoolsv.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 49667,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 3460,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "fe80::44cf:ce5a:2da2:7aa5",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 49666,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 3076,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 49665,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "wininit.exe",
-          "pid": 584,
-          "path": "C:\\Windows\\System32\\wininit.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "192.168.161.1",
-        "local_port": 139,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "System",
-          "pid": 4,
-          "path": null,
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 7680,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 9628,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\NETWORK SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 49668,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "spoolsv.exe",
-          "pid": 4332,
-          "path": "C:\\Windows\\System32\\spoolsv.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 912,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "vmware-authd.exe",
-          "pid": 5292,
-          "path": "C:\\Program Files (x86)\\VMware\\VMware Player\\vmware-authd.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "::",
-        "local_port": 49671,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "services.exe",
-          "pid": 1112,
-          "path": "C:\\Windows\\System32\\services.exe",
-          "user": "NT AUTHORITY\\SYSTEM"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 19576,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "0.0.0.0",
-        "local_port": 5040,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "svchost.exe",
-          "pid": 8360,
-          "path": "C:\\Windows\\System32\\svchost.exe",
-          "user": "NT AUTHORITY\\LOCAL SERVICE"
-        }
-      },
-      {
-        "proto": "tcp",
-        "local_ip": "fe80::16f5:b4e3:7ab7:1154",
-        "local_port": 6881,
-        "remote_ip": null,
-        "remote_port": null,
-        "status": "LISTEN",
-        "process": {
-          "name": "utweb.exe",
-          "pid": 16188,
-          "path": "C:\\Users\\senat\\AppData\\Roaming\\uTorrent Web\\utweb.exe",
-          "user": "SENATOR\\senat"
         }
       },
       {

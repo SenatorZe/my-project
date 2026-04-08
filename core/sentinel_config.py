@@ -35,6 +35,8 @@ def get_default_config() -> Dict[str, Any]:
 
     #Monitoring feature toggles
     return {
+        "network_dns_lookup_enabled": True,
+        "network_dns_lookup_timeout_seconds": 1.5,
         "agent_id": agent_id,
         "display_name": display_name,
 
@@ -63,6 +65,7 @@ def get_default_config() -> Dict[str, Any]:
         # NEW: file paths that FIM will track.
         # These can be updated from the controller later.
         "fim_paths": [],  # e.g. ["C:\\Windows\\System32\\drivers\\etc\\hosts"]
+        "fim_quarantine_dir": "C:\\ProgramData\\Sentinel\\quarantine"
     }
 
 def save_config(config: Dict[str, Any], path: str = CONFIG_PATH) -> None:
