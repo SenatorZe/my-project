@@ -29,8 +29,11 @@
 from __future__ import annotations
 
 import pickle                          # used to save and load the trained model to/from disk
+import platform
 from pathlib import Path               # cross-platform file path handling
 from typing import Any, Dict, List, Optional
+
+_OS = platform.system()   # "Windows", "Darwin", or "Linux"
 
 import numpy as np                     # converts our list of feature rows into a matrix the model can read
 from sklearn.ensemble import IsolationForest  # the ML algorithm — explained in detail below
@@ -261,7 +264,8 @@ def _extract_connection_features(
     # Pull the process name and exe path, normalising to lowercase.
     # We check both 'path' (baseline format) and 'exe' (live monitor format).
     pname = (pinfo.get("name") or "").lower()
-    exe   = (pinfo.get("exe") or pinfo.get("path") or "").lower().replace("/", "\\")
+    # Normalise to forward slashes so path checks work on any OS.
+    exe   = (pinfo.get("exe") or pinfo.get("path") or "").lower().replace("\\", "/")
 
     # ------------------------------------------------------------------
     # PORT FEATURES
@@ -300,12 +304,15 @@ def _extract_connection_features(
     # Is the executable installed in Program Files?
     # Legitimate software installed by a proper installer lives here.
     # Malware dropped by another process usually does NOT.
-    proc_from_pgf   = 1.0 if "program files" in exe else 0.0
-
-    # Is the executable running from a Temp folder?
-    # This is one of the strongest single signals — legitimate software
-    # almost never runs persistently from a Temp directory.
-    proc_from_temp  = 1.0 if ("\\temp\\" in exe or "\\tmp\\" in exe) else 0.0
+    if _OS == "Windows":
+        proc_from_pgf  = 1.0 if "program files" in exe else 0.0
+        proc_from_temp = 1.0 if ("/appdata/local/temp/" in exe or "/temp/" in exe or "/tmp/" in exe) else 0.0
+    elif _OS == "Darwin":
+        proc_from_pgf  = 1.0 if ("/applications/" in exe or "/usr/local/" in exe) else 0.0
+        proc_from_temp = 1.0 if ("/tmp/" in exe or "/var/tmp/" in exe) else 0.0
+    else:   # Linux
+        proc_from_pgf  = 1.0 if ("/opt/" in exe or "/usr/local/" in exe) else 0.0
+        proc_from_temp = 1.0 if ("/tmp/" in exe or "/var/tmp/" in exe or "/dev/shm/" in exe) else 0.0
 
     # How "word-like" is the process name? Low ratio = suspicious.
     vowel_ratio     = _name_vowel_ratio(pname)

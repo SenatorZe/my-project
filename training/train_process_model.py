@@ -33,8 +33,11 @@
 from __future__ import annotations
 
 import pickle                           # save/load model to/from disk
+import platform
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+
+_OS = platform.system()   # "Windows", "Darwin", or "Linux"
 
 import numpy as np
 from sklearn.ensemble import IsolationForest
@@ -360,7 +363,9 @@ def _extract_process_features(proc: Dict[str, Any]) -> List[float]:
         [18] cmdline_obfuscation    — cmdline contains PowerShell obfuscation markers
     """
     name        = (proc.get("name") or "").lower()
-    exe         = (proc.get("exe") or "").lower().replace("/", "\\")
+    # Normalise to forward slashes so the same keyword checks work on
+    # Windows, macOS, and Linux without separate branches below.
+    exe         = (proc.get("exe") or "").lower().replace("\\", "/")
     username    = (proc.get("username") or "").lower()
     parent_name = (proc.get("parent_name") or "").lower()
     cpu         = proc.get("cpu_percent") or 0.0
@@ -369,49 +374,52 @@ def _extract_process_features(proc: Dict[str, Any]) -> List[float]:
     # ------------------------------------------------------------------
     # EXE LOCATION FEATURES
     # Where on disk does this process live?
+    # Path strings use forward slashes on all platforms after normalisation.
     # ------------------------------------------------------------------
 
-    # Processes in System32 and other Windows subdirectories are core OS.
-    is_system_dir = 1.0 if "\\windows\\" in exe else 0.0
+    if _OS == "Windows":
+        is_system_dir       = 1.0 if "/windows/" in exe else 0.0
+        is_program_files    = 1.0 if "program files" in exe else 0.0
+        is_temp_dir         = 1.0 if ("/appdata/local/temp/" in exe or "/temp/" in exe or "/tmp/" in exe) else 0.0
+        is_appdata_programs = 1.0 if (
+            "/appdata/local/programs/" in exe or
+            "/appdata/roaming/" in exe or
+            "/appdata/local/jetbrains/" in exe
+        ) else 0.0
+        is_appdata_other    = 1.0 if (
+            "/appdata/" in exe and
+            "/temp/" not in exe and
+            "/appdata/local/programs/" not in exe and
+            "/appdata/roaming/" not in exe and
+            "/appdata/local/jetbrains/" not in exe
+        ) else 0.0
+        is_windows_special  = 1.0 if ("/windowsapps/" in exe or "/driverstore/" in exe) else 0.0
 
-    # Properly installed third-party software lives here.
-    is_program_files = 1.0 if "program files" in exe else 0.0
+    elif _OS == "Darwin":   # macOS
+        is_system_dir       = 1.0 if (
+            exe.startswith("/usr/") or exe.startswith("/bin/") or
+            exe.startswith("/sbin/") or exe.startswith("/system/")
+        ) else 0.0
+        is_program_files    = 1.0 if ("/applications/" in exe or "/usr/local/" in exe) else 0.0
+        is_temp_dir         = 1.0 if ("/tmp/" in exe or "/var/tmp/" in exe) else 0.0
+        is_appdata_programs = 1.0 if ("/.local/share/" in exe or "/library/" in exe) else 0.0
+        is_appdata_other    = 1.0 if ("/.config/" in exe) else 0.0
+        is_windows_special  = 0.0   # not applicable on macOS
 
-    # Executables running from Temp are almost never legitimate.
-    is_temp_dir = 1.0 if ("\\temp\\" in exe or "\\tmp\\" in exe) else 0.0
-
-    # AppData\Local\Programs and AppData\Roaming are legitimate install locations.
-    # Python, Claude, Ollama, JetBrains, Slack, Discord all install here.
-    # This is SEPARATE from is_appdata_other below so the model can tell
-    # "installed in AppData\Programs" (normal) from "lurking in AppData\random" (sus).
-    is_appdata_programs = 1.0 if (
-        "\\appdata\\local\\programs\\" in exe or
-        "\\appdata\\roaming\\" in exe or
-        "\\appdata\\local\\jetbrains\\" in exe
-    ) else 0.0
-
-    # AppData but NOT in the Programs subfolder or Temp — a catch-all for
-    # other AppData locations. Still a mild signal on its own.
-    is_appdata_other = 1.0 if (
-        "\\appdata\\" in exe and
-        "\\temp\\" not in exe and
-        "\\appdata\\local\\programs\\" not in exe and
-        "\\appdata\\roaming\\" not in exe and
-        "\\appdata\\local\\jetbrains\\" not in exe
-    ) else 0.0
-
-    # Windows special system paths that are legitimate but not under System32.
-    # WindowsApps = Microsoft Store applications (Xbox, Clipchamp, etc.)
-    # DriverStore  = hardware driver executables (Intel graphics, etc.)
-    is_windows_special = 1.0 if (
-        "\\windowsapps\\" in exe or
-        "\\driverstore\\" in exe
-    ) else 0.0
+    else:   # Linux
+        is_system_dir       = 1.0 if (
+            exe.startswith("/usr/") or exe.startswith("/bin/") or
+            exe.startswith("/sbin/") or exe.startswith("/lib/")
+        ) else 0.0
+        is_program_files    = 1.0 if ("/opt/" in exe or "/usr/local/" in exe) else 0.0
+        is_temp_dir         = 1.0 if ("/tmp/" in exe or "/var/tmp/" in exe or "/dev/shm/" in exe) else 0.0
+        is_appdata_programs = 1.0 if ("/.local/" in exe or "/.config/" in exe) else 0.0
+        is_appdata_other    = 0.0   # Linux doesn't have an AppData equivalent
+        is_windows_special  = 0.0
 
     # How deep in the directory tree is this exe?
-    # System processes tend to be shallow (C:\\Windows\\System32\\svchost.exe = depth 3).
-    # Malware dropped by an exploit can be buried many levels deep.
-    path_depth = float(exe.count("\\")) if exe else 0.0
+    # System processes tend to be shallow; malware can be buried many levels deep.
+    path_depth = float(exe.count("/")) if exe else 0.0
 
     # ------------------------------------------------------------------
     # NAME FEATURES

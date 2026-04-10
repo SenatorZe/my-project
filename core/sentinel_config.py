@@ -11,14 +11,10 @@ import socket
 from pathlib import Path
 from typing import Any, Dict
 
-# Config file name
-CONFIG_PATH = None
-path_windows=r'C:\Users\senat\PycharmProjects\Sentinel\agent_config.json'
-path_macos=r'/Users/logicalzee/PycharmProjects/sentinel_test/agent_config.json'
-if platform.system() == "Windows":
-    CONFIG_PATH = path_windows
-else:
-    CONFIG_PATH = path_macos
+# Config file lives in the project root — the folder that contains core/.
+# Using a path relative to this file means it resolves correctly on any
+# machine regardless of username, drive letter, or install location.
+CONFIG_PATH = str(Path(__file__).parent.parent / "agent_config.json")
 
 def get_default_config() -> Dict[str, Any]:
     # Create a default configuration dictionary for the agent.
@@ -64,8 +60,12 @@ def get_default_config() -> Dict[str, Any]:
 
         # NEW: file paths that FIM will track.
         # These can be updated from the controller later.
-        "fim_paths": [],  # e.g. ["C:\\Windows\\System32\\drivers\\etc\\hosts"]
-        "fim_quarantine_dir": "C:\\ProgramData\\Sentinel\\quarantine"
+        "fim_paths": [],
+        "fim_quarantine_dir": (
+            r"C:\ProgramData\Sentinel\quarantine"
+            if platform.system() == "Windows"
+            else "/var/lib/sentinel/quarantine"
+        )
     }
 
 def save_config(config: Dict[str, Any], path: str = CONFIG_PATH) -> None:

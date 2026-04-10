@@ -33,9 +33,12 @@ from __future__ import annotations
 
 from typing import Dict, Any, List, Optional
 from pathlib import Path
+import platform
 
 import psutil
 import numpy as np
+
+_OS = platform.system()   # "Windows", "Darwin", or "Linux"
 
 from core.sentinel_alerts import make_process_alert
 
@@ -52,27 +55,42 @@ from training.train_process_model import (
 # HARD RULE: SUSPICIOUS DIRECTORY KEYWORDS
 #
 # Executables running from these locations are flagged regardless of the model.
-# These rules are tight enough that they almost never produce false positives —
-# legitimate software installed by a proper installer never runs from Temp or
-# the user's Downloads folder persistently.
+# All paths are matched against a forward-slash-normalised, lowercased copy of
+# the exe path so the same check works on Windows, macOS, and Linux.
 # ---------------------------------------------------------------------------
-SUSPICIOUS_DIR_KEYWORDS = [
-    "\\appdata\\local\\temp",
-    "\\appdata\\local\\temp\\",
-    "\\downloads\\",
-    "\\desktop\\",
-]
+if _OS == "Windows":
+    SUSPICIOUS_DIR_KEYWORDS = [
+        "/appdata/local/temp/",
+        "/downloads/",
+        "/desktop/",
+    ]
+elif _OS == "Darwin":   # macOS
+    SUSPICIOUS_DIR_KEYWORDS = [
+        "/tmp/",
+        "/var/tmp/",
+        "/downloads/",
+        "/desktop/",
+    ]
+else:                   # Linux and anything else
+    SUSPICIOUS_DIR_KEYWORDS = [
+        "/tmp/",
+        "/var/tmp/",
+        "/dev/shm/",
+        "/downloads/",
+        "/desktop/",
+    ]
 
 
 def _normalize_path(path: Optional[str]) -> Optional[str]:
     """
     Normalise a filesystem path for safe string comparison:
         - lowercase
-        - replace forward slashes with backslashes
+        - all separators converted to forward slashes
         - attempt to resolve to absolute path
 
-    Used so that "C:/Windows/system32/svchost.exe" and
-    "c:\\windows\\system32\\svchost.exe" compare as equal.
+    Using forward slashes universally means the same keyword list works on
+    Windows ("C:\\Users\\...\\Temp\\" → "c:/users/.../temp/"),
+    macOS, and Linux without separate code paths.
     """
     if not path:
         return None
@@ -82,9 +100,9 @@ def _normalize_path(path: Optional[str]) -> Optional[str]:
             p = p.resolve()
         except OSError:
             pass
-        return str(p).lower().replace("/", "\\")
+        return str(p).lower().replace("\\", "/")
     except Exception:
-        return str(path).replace("/", "\\").lower()
+        return str(path).replace("\\", "/").lower()
 
 
 def _is_suspicious_path(exe: Optional[str]) -> bool:

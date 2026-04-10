@@ -1,0 +1,29 @@
+# ── Machine-specific files ────────────────────────────────────────────────────
+# Each machine generates these on first run. They contain paths, usernames,
+# and IP addresses specific to the local environment. Never commit them.
+agent_config.json
+sentinel_baseline.json
+
+# ── Trained models ────────────────────────────────────────────────────────────
+# Pickle files are binary and machine-generated. Each installation should
+# retrain from its own baseline. Committing them can also be a security risk.
+models/*.pkl
+
+# ── Python artefacts ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── IDE / editor ──────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+
+# ── OS noise ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

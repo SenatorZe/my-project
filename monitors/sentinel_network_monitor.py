@@ -41,6 +41,17 @@ from training.train_network_model import (
 )
 
 import numpy as np   # needed to wrap a single feature row before passing to the model
+import platform
+
+_OS = platform.system()
+
+# Temp-directory path fragments, normalised to forward slashes.
+if _OS == "Windows":
+    _TEMP_FRAGMENTS = ("/appdata/local/temp/", "/temp/", "/tmp/")
+elif _OS == "Darwin":
+    _TEMP_FRAGMENTS = ("/tmp/", "/var/tmp/")
+else:
+    _TEMP_FRAGMENTS = ("/tmp/", "/var/tmp/", "/dev/shm/")
 
 # ---------------------------------------------------------------------------
 # DNS CACHE
@@ -324,8 +335,8 @@ def detect_suspicious_connections(
         # Malware dropped by an exploit or downloader almost always does.
         # This rule is tight enough to fire with very few false positives.
         # -------------------------------------------------------------------
-        exe_path = (pinfo.get('exe') or '').lower().replace('/', '\\')
-        if ('\\temp\\' in exe_path or '\\tmp\\' in exe_path) and not _is_private_ip(rip):
+        exe_path = (pinfo.get('exe') or '').lower().replace('\\', '/')
+        if any(frag in exe_path for frag in _TEMP_FRAGMENTS) and not _is_private_ip(rip):
             if 'proc_from_temp_public_connection' not in reasons:
                 reasons.append('proc_from_temp_public_connection')
                 severity = 'high'
